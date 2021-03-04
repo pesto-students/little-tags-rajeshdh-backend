@@ -1,0 +1,66 @@
+[
+    {
+        "id": "product_id_1",
+        "title": "ROYCE-2 Running Shoes For Men",
+        "image": "/images/products/royce-1.jpeg",
+        "brand": "Campus",
+        "offer": "10",
+        "category": "shoe",
+        "currency" : "USD",
+        "items": 5,
+        "gallery": [],
+        "originalPrice": 1049,
+        "currentPrice": 944,
+        "features": [
+            {
+                "type": "color",
+                "value": [
+                    "rgb(57, 71, 110)",
+                    "rgb(206, 74, 144)",
+                    "rgb(74, 206, 107)"
+                ]
+            },
+            {
+                "type": "size",
+                "value": [
+                    "8",
+                    "9",
+                    "10"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "product_id_2",
+        "title": "Elate M Running Shoes For Men",
+        "image": "/images/products/shoe-2.jpeg",
+        "brand": "Adidas",
+        "offer": "43",
+        "category": "shoe",
+        "currency" : "USD",
+        "items": 3,
+        "gallery": [],
+        "originalPrice": 2499,
+        "currentPrice": 1046,
+        "features": [
+            {
+                "type": "color",
+                "value": [
+                    "rgb(57, 71, 110)",
+                    "rgb(206, 74, 144)",
+                    "rgb(74, 206, 107)"
+                ]
+            },
+            {
+                "type": "size",
+                "value": [
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ]
+            }
+        ]
+    }
+]
