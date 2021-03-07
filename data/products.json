@@ -1,0 +1,196 @@
+[
+    {
+        "id": "product_id_1",
+        "title": "ROYCE-2 Running Shoes For Men",
+        "image": "https://rukminim1.flixcart.com/image/660/792/joud1u80/shoe/h/v/v/5g-634-10-campus-blk012-original-imafb75h99zrghjb.jpeg?q=50",
+        "brand": "campus",
+        "offer": "10",
+        "category": "shoe",
+        "currency": "INR",
+        "rating": 2,
+        "stock": 5,
+        "gallery": [],
+        "originalPrice": 1049,
+        "currentPrice": 944,
+        "features": [
+            {
+                "type": "color",
+                "value": [
+                    "rgb(57, 71, 110)",
+                    "rgb(206, 74, 144)",
+                    "rgb(74, 206, 107)"
+                ]
+            },
+            {
+                "type": "size",
+                "value": [
+                    "8",
+                    "9",
+                    "10"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "product_id_2",
+        "title": "Elate M Running Shoes For Men",
+        "image": "https://rukminim1.flixcart.com/image/660/792/kg8avm80-0/shoe/l/h/2/ew2449-adidas-cblack-ftwwht-original-imafwgsgzrx5tdcg.jpeg?q=50",
+        "brand": "adidas",
+        "offer": "43",
+        "category": "shoe",
+        "currency": "INR",
+        "rating": 4,
+        "stock": 3,
+        "gallery": [],
+        "originalPrice": 2499,
+        "currentPrice": 1046,
+        "features": [
+            {
+                "type": "color",
+                "value": [
+                    "rgb(57, 71, 110)",
+                    "rgb(206, 74, 144)",
+                    "rgb(74, 206, 107)"
+                ]
+            },
+            {
+                "type": "size",
+                "value": [
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "product_id_3",
+        "title": "Bouncer-01 shoes for boys",
+        "image": "https://rukminim1.flixcart.com/image/660/792/keekmfk0-0/shoe/b/p/k/bouncer-01cgryorng-6-asian-grey-original-imafv3h4hzjgvw2z.jpeg?q=50",
+        "brand": "asian",
+        "offer": "28",
+        "category": "shoe",
+        "currency": "INR",
+        "rating": 5,
+        "stock": 9,
+        "gallery": [],
+        "originalPrice": 999,
+        "currentPrice": 719,
+        "features": [
+            {
+                "type": "color",
+                "value": [
+                    "rgb(22, 174, 144)"
+                ]
+            },
+            {
+                "type": "size",
+                "value": [
+                    "6",
+                    "7",
+                    "8"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "product_id_4",
+        "title": "Hiking and Trekking shoes for men",
+        "image": "https://rukminim1.flixcart.com/image/660/792/kg9qbgw0-0/shoe/6/s/k/gc-1868115-39-woodland-camel-original-imafwjqdnfh7j7ad.jpeg?q=50",
+        "brand": "woodland",
+        "offer": "15",
+        "category": "shoe",
+        "currency": "INR",
+        "rating": 4,
+        "stock": 9,
+        "gallery": [],
+        "originalPrice": 3795,
+        "currentPrice": 3225,
+        "features": [
+            {
+                "type": "color",
+                "value": [
+                    "rgb(22, 74, 144)",
+                    "rgb(145, 206, 107)"
+                ]
+            },
+            {
+                "type": "size",
+                "value": [
+                    "6",
+                    "7",
+                    "8"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "product_id_5",
+        "title": "Revolution 5 EXT Shoes for Men",
+        "image": "https://rukminim1.flixcart.com/image/660/792/klfhk7k0/shoe/v/7/d/9-cz8591-012nike-10-nike-photon-dust-black-bright-crimson-original-imagyk22g4kyqpup.jpeg?q=50",
+        "brand": "nike",
+        "offer": "10",
+        "category": "shoe",
+        "currency": "INR",
+        "rating": 3,
+        "stock": 4,
+        "gallery": [],
+        "originalPrice": 1000,
+        "currentPrice": 900,
+        "features": [
+            {
+                "type": "color",
+                "value": [
+                    "rgb(22, 174, 44)",
+                    "rgb(145, 16, 107)",
+                    "rgb(15, 26, 107)",
+                    "rgb(11, 206, 107)",
+                    "rgb(14, 26, 107)"
+                ]
+            },
+            {
+                "type": "size",
+                "value": [
+                    "6",
+                    "7",
+                    "8"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "product_id_6",
+        "title": "LITE LP Training & Gym Shoes for Men",
+        "image": "https://rukminim1.flixcart.com/image/660/792/kfvfwy80-0/shoe/w/w/l/fw1742-10-reebok-trugr7-nacho-none-original-imafw8b9wmdjmjcg.jpeg?q=50",
+        "brand": "reebok",
+        "offer": "43",
+        "category": "shoe",
+        "currency" : "INR",
+        "rating" : 5,
+        "stock": 9,
+        "gallery": [],
+        "originalPrice": 2799,
+        "currentPrice": 1595,
+        "features": [
+            {
+                "type": "color",
+                "value": [
+                    "rgb(150, 74, 22)",
+                    "rgb(145, 206, 107)",
+                    "rgb(145, 22, 107)",
+                    "rgb(145, 123, 107)"
+                ]
+            },
+            {
+                "type": "size",
+                "value": [
+                    "6",
+                    "7",
+                    "8"
+                ]
+            }
+        ]
+    }
+]
