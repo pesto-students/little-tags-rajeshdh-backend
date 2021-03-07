@@ -8,7 +8,7 @@ router.get('/__test', function (req, res, next) {
   res.send("Hello World")
 });
 
-router.get('/category/:name', (req, res) => {
+router.post('/category/:name', (req, res) => {
   const filterCriteria = req.body
   const category = req.params.name
   const response = {}
