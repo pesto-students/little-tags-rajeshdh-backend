@@ -10,7 +10,38 @@
         "currency": "INR",
         "rating": 2,
         "stock": 5,
-        "gallery": [],
+        "gallery": [
+            {
+                "id": 1,
+                "title": "repellendus id ullam",
+                "label": "Dolorem officiis temporibus."
+            },
+            {
+                "id": 2,
+                "title": "excepturi consequatur est",
+                "label": "Officia non provident dolor esse et neque."
+            },
+            {
+                "id": 3,
+                "title": "eius doloribus blanditiis",
+                "label": "Ut recusandae vel vitae molestiae id soluta."
+            },
+            {
+                "id": 4,
+                "title": "nihil voluptates delectus",
+                "label": "Qui vel consequatur recusandae illo repellendus."
+            },
+            {
+                "id": 5,
+                "title": "nemo dolorem necessitatibus",
+                "label": "Placeat odit velit itaque voluptatem."
+            },
+            {
+                "id": 6,
+                "title": "dolorem quibusdam quasi",
+                "label": "Adipisci officiis repudiandae."
+            }
+        ],
         "originalPrice": 1049,
         "currentPrice": 944,
         "features": [
@@ -53,7 +84,38 @@
         "currency": "INR",
         "rating": 4,
         "stock": 3,
-        "gallery": [],
+        "gallery": [
+            {
+                "id": 1,
+                "title": "repellendus id ullam",
+                "label": "Dolorem officiis temporibus."
+            },
+            {
+                "id": 2,
+                "title": "excepturi consequatur est",
+                "label": "Officia non provident dolor esse et neque."
+            },
+            {
+                "id": 3,
+                "title": "eius doloribus blanditiis",
+                "label": "Ut recusandae vel vitae molestiae id soluta."
+            },
+            {
+                "id": 4,
+                "title": "nihil voluptates delectus",
+                "label": "Qui vel consequatur recusandae illo repellendus."
+            },
+            {
+                "id": 5,
+                "title": "nemo dolorem necessitatibus",
+                "label": "Placeat odit velit itaque voluptatem."
+            },
+            {
+                "id": 6,
+                "title": "dolorem quibusdam quasi",
+                "label": "Adipisci officiis repudiandae."
+            }
+        ],
         "originalPrice": 2499,
         "currentPrice": 1046,
         "features": [
@@ -100,7 +162,38 @@
         "currency": "INR",
         "rating": 5,
         "stock": 9,
-        "gallery": [],
+        "gallery": [
+            {
+                "id": 1,
+                "title": "repellendus id ullam",
+                "label": "Dolorem officiis temporibus."
+            },
+            {
+                "id": 2,
+                "title": "excepturi consequatur est",
+                "label": "Officia non provident dolor esse et neque."
+            },
+            {
+                "id": 3,
+                "title": "eius doloribus blanditiis",
+                "label": "Ut recusandae vel vitae molestiae id soluta."
+            },
+            {
+                "id": 4,
+                "title": "nihil voluptates delectus",
+                "label": "Qui vel consequatur recusandae illo repellendus."
+            },
+            {
+                "id": 5,
+                "title": "nemo dolorem necessitatibus",
+                "label": "Placeat odit velit itaque voluptatem."
+            },
+            {
+                "id": 6,
+                "title": "dolorem quibusdam quasi",
+                "label": "Adipisci officiis repudiandae."
+            }
+        ],
         "originalPrice": 999,
         "currentPrice": 719,
         "features": [
@@ -139,7 +232,38 @@
         "currency": "INR",
         "rating": 4,
         "stock": 9,
-        "gallery": [],
+        "gallery": [
+            {
+                "id": 1,
+                "title": "repellendus id ullam",
+                "label": "Dolorem officiis temporibus."
+            },
+            {
+                "id": 2,
+                "title": "excepturi consequatur est",
+                "label": "Officia non provident dolor esse et neque."
+            },
+            {
+                "id": 3,
+                "title": "eius doloribus blanditiis",
+                "label": "Ut recusandae vel vitae molestiae id soluta."
+            },
+            {
+                "id": 4,
+                "title": "nihil voluptates delectus",
+                "label": "Qui vel consequatur recusandae illo repellendus."
+            },
+            {
+                "id": 5,
+                "title": "nemo dolorem necessitatibus",
+                "label": "Placeat odit velit itaque voluptatem."
+            },
+            {
+                "id": 6,
+                "title": "dolorem quibusdam quasi",
+                "label": "Adipisci officiis repudiandae."
+            }
+        ],
         "originalPrice": 3795,
         "currentPrice": 3225,
         "features": [
@@ -180,7 +304,38 @@
         "currency": "INR",
         "rating": 3,
         "stock": 4,
-        "gallery": [],
+        "gallery": [
+            {
+                "id": 1,
+                "title": "repellendus id ullam",
+                "label": "Dolorem officiis temporibus."
+            },
+            {
+                "id": 2,
+                "title": "excepturi consequatur est",
+                "label": "Officia non provident dolor esse et neque."
+            },
+            {
+                "id": 3,
+                "title": "eius doloribus blanditiis",
+                "label": "Ut recusandae vel vitae molestiae id soluta."
+            },
+            {
+                "id": 4,
+                "title": "nihil voluptates delectus",
+                "label": "Qui vel consequatur recusandae illo repellendus."
+            },
+            {
+                "id": 5,
+                "title": "nemo dolorem necessitatibus",
+                "label": "Placeat odit velit itaque voluptatem."
+            },
+            {
+                "id": 6,
+                "title": "dolorem quibusdam quasi",
+                "label": "Adipisci officiis repudiandae."
+            }
+        ],
         "originalPrice": 1000,
         "currentPrice": 900,
         "features": [
@@ -227,7 +382,38 @@
         "currency": "INR",
         "rating": 5,
         "stock": 9,
-        "gallery": [],
+        "gallery": [
+            {
+                "id": 1,
+                "title": "repellendus id ullam",
+                "label": "Dolorem officiis temporibus."
+            },
+            {
+                "id": 2,
+                "title": "excepturi consequatur est",
+                "label": "Officia non provident dolor esse et neque."
+            },
+            {
+                "id": 3,
+                "title": "eius doloribus blanditiis",
+                "label": "Ut recusandae vel vitae molestiae id soluta."
+            },
+            {
+                "id": 4,
+                "title": "nihil voluptates delectus",
+                "label": "Qui vel consequatur recusandae illo repellendus."
+            },
+            {
+                "id": 5,
+                "title": "nemo dolorem necessitatibus",
+                "label": "Placeat odit velit itaque voluptatem."
+            },
+            {
+                "id": 6,
+                "title": "dolorem quibusdam quasi",
+                "label": "Adipisci officiis repudiandae."
+            }
+        ],
         "originalPrice": 2799,
         "currentPrice": 1595,
         "features": [
