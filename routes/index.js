@@ -39,5 +39,11 @@ router.post('/category/:name', (req, res) => {
   res.send(response);
 });
 
+router.get('/product/:id', (req, res) => { 
+  const id = req.params.id
+  let data = products.filter(product => product.id === id)
+  res.send(data);
+})
+
 
 module.exports = router;
