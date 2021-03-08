@@ -21,7 +21,7 @@ app.use(cors({
     }
     const message = `The CORS policy for this origin doesn't 
     allow access from the particular origin.`;
-    if (whiteList.includes(origin)) {
+    if (!whiteList.includes(origin)) {
       return callback(new TypeError(message), false);
     }
     return callback(null, true)
