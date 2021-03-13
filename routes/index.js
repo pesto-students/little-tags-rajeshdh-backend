@@ -39,10 +39,25 @@ router.post('/category/:name', (req, res) => {
   res.send(response);
 });
 
-router.get('/product/:id', (req, res) => { 
+router.get('/product/:id', (req, res) => {
   const id = req.params.id
   let data = products.filter(product => product.id === id)
   res.send(data);
+})
+
+router.post('/cart', (req, res) => {
+  const cartItems = req.body
+  const results = products.filter(product => cartItems.includes(product.id))
+  res.send(results)
+})
+
+router.post('/wishlist', (req, res) => {
+  const cartItems = req.body
+  const results = products.filter(product => cartItems.includes(product.id))
+  const response = {
+    data: results
+  }
+  res.send(response)
 })
 
 

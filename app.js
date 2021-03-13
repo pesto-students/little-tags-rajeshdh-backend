@@ -13,14 +13,16 @@ var app = express();
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'jade');
 
-let whiteList = ['http://127.0.0.1:3000','http://localhost:3000','https://little-tags-pesto.netlify.app']
+let whiteList = ['http://127.0.0.1:3000', 'http://localhost:3000', 'https://little-tags-pesto.netlify.app']
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin) return callback(null, true)
-    if (whiteList.indexOf(origin) === -1) {
-      const message = `The CORS policy for this origin doesn't 
-      allow access from the particular origin.`;
-      return callback(new Error(message), false);
+    if (!origin) {
+      return callback(null, true)
+    }
+    const message = `The CORS policy for this origin doesn't 
+    allow access from the particular origin.`;
+    if (!whiteList.includes(origin)) {
+      return callback(new TypeError(message), false);
     }
     return callback(null, true)
   }
