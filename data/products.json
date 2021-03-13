@@ -9,37 +9,44 @@
         "category": "shoe",
         "currency": "INR",
         "rating": 2,
+        "noOfReview": 10, 
         "stock": 5,
         "gallery": [
             {
                 "id": 1,
                 "title": "repellendus id ullam",
-                "label": "Dolorem officiis temporibus."
+                "label": "Dolorem officiis temporibus.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k3lwuq80/shoe/z/v/h/mrj1324-6-aadi-black-original-imafmzfcjcjytgcf.jpeg?q=50"
             },
             {
                 "id": 2,
                 "title": "excepturi consequatur est",
-                "label": "Officia non provident dolor esse et neque."
+                "label": "Officia non provident dolor esse et neque.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k6l2vm80/shoe/e/f/x/black-shark-44-xylus-black-white-original-imafn43gg2ekq32j.jpeg?q=50"
             },
             {
                 "id": 3,
                 "title": "eius doloribus blanditiis",
-                "label": "Ut recusandae vel vitae molestiae id soluta."
+                "label": "Ut recusandae vel vitae molestiae id soluta.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k5msb680/shoe/a/y/z/dg-335-black-fashion-6-digitrendzz-black-original-imafnkzz2yrgkwcy.jpeg?q=50"
             },
             {
                 "id": 4,
                 "title": "nihil voluptates delectus",
-                "label": "Qui vel consequatur recusandae illo repellendus."
+                "label": "Qui vel consequatur recusandae illo repellendus.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k0bbb0w0/shoe/q/a/z/373100-9-puma-peacoat-white-original-imafk5fzcyfxzn6v.jpeg?q=50"
             },
             {
                 "id": 5,
                 "title": "nemo dolorem necessitatibus",
-                "label": "Placeat odit velit itaque voluptatem."
+                "label": "Placeat odit velit itaque voluptatem.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/kkwwu4w0/shoe/l/p/u/9-suson14-suson-black-original-imagy5hun3famgfz.jpeg?q=50"
             },
             {
                 "id": 6,
                 "title": "dolorem quibusdam quasi",
-                "label": "Adipisci officiis repudiandae."
+                "label": "Adipisci officiis repudiandae.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k4x2du80/shoe/g/2/x/mrj1339-7-aadi-orange-original-imafnq6yrhtecwwu.jpeg?q=50"
             }
         ],
         "originalPrice": 1049,
@@ -88,32 +95,38 @@
             {
                 "id": 1,
                 "title": "repellendus id ullam",
-                "label": "Dolorem officiis temporibus."
+                "label": "Dolorem officiis temporibus.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/kl175ow0/shoe/n/c/h/10-852-44-crazyly-grey-original-imagy8thzxrhgnxz.jpeg?q=50"
             },
             {
                 "id": 2,
                 "title": "excepturi consequatur est",
-                "label": "Officia non provident dolor esse et neque."
+                "label": "Officia non provident dolor esse et neque.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/jy1v7gw0/shoe/x/z/j/wndr-13cblkrd-12-asian-black-red-original-imaenr72ttddwgwh.jpeg?q=50"
             },
             {
                 "id": 3,
                 "title": "eius doloribus blanditiis",
-                "label": "Ut recusandae vel vitae molestiae id soluta."
+                "label": "Ut recusandae vel vitae molestiae id soluta.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k5bcscw0/shoe/3/z/5/371894-9-puma-peacoat-tradewinds-original-imafny7rvzazqyfb.jpeg?q=50"
             },
             {
                 "id": 4,
                 "title": "nihil voluptates delectus",
-                "label": "Qui vel consequatur recusandae illo repellendus."
+                "label": "Qui vel consequatur recusandae illo repellendus.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/ju4em4w0/shoe/w/h/z/wndr-13cgrnred-10-asian-green-original-imaf8adfzf7trh4y.jpeg?q=50"
             },
             {
                 "id": 5,
                 "title": "nemo dolorem necessitatibus",
-                "label": "Placeat odit velit itaque voluptatem."
+                "label": "Placeat odit velit itaque voluptatem.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/kcc9q4w0/shoe/8/a/6/spcy707-7-magnolia-multicolour-original-imafthk7mzvhh2xa.jpeg?q=50"
             },
             {
                 "id": 6,
                 "title": "dolorem quibusdam quasi",
-                "label": "Adipisci officiis repudiandae."
+                "label": "Adipisci officiis repudiandae.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/klmmrgw0/shoe/w/e/t/9-919-9-off-sport-black-original-imagypg2bzcpzvny.jpeg?q=50"
             }
         ],
         "originalPrice": 2499,
@@ -166,32 +179,38 @@
             {
                 "id": 1,
                 "title": "repellendus id ullam",
-                "label": "Dolorem officiis temporibus."
+                "label": "Dolorem officiis temporibus.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k3lwuq80/shoe/z/v/h/mrj1324-6-aadi-black-original-imafmzfcjcjytgcf.jpeg?q=50"
             },
             {
                 "id": 2,
                 "title": "excepturi consequatur est",
-                "label": "Officia non provident dolor esse et neque."
+                "label": "Officia non provident dolor esse et neque.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/klfhk7k0/shoe/t/t/a/6-ci9982-004nike-nike-black-white-anthracite-original-imagykfhxskegvxv.jpeg?q=50"
             },
             {
                 "id": 3,
                 "title": "eius doloribus blanditiis",
-                "label": "Ut recusandae vel vitae molestiae id soluta."
+                "label": "Ut recusandae vel vitae molestiae id soluta.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k4k7f680/shoe/m/k/j/cg-02-13-campus-bt-grn-gry-original-imafnfyahxj7hwxn.jpeg?q=50"
             },
             {
                 "id": 4,
                 "title": "nihil voluptates delectus",
-                "label": "Qui vel consequatur recusandae illo repellendus."
+                "label": "Qui vel consequatur recusandae illo repellendus.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k3lwuq80/shoe/z/v/h/mrj1324-6-aadi-black-original-imafmzfcjcjytgcf.jpeg?q=50"
             },
             {
                 "id": 5,
                 "title": "nemo dolorem necessitatibus",
-                "label": "Placeat odit velit itaque voluptatem."
+                "label": "Placeat odit velit itaque voluptatem.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/kerfl3k0-0/shoe/v/x/e/se201-8-8-solwin-black-original-imafvdpxncyr9nyy.jpeg?q=50"
             },
             {
                 "id": 6,
                 "title": "dolorem quibusdam quasi",
-                "label": "Adipisci officiis repudiandae."
+                "label": "Adipisci officiis repudiandae.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k0r15e80/shoe/x/m/q/courtking2-7-yonex-white-black-original-imafkgyjgxkaugdg.jpeg?q=50"
             }
         ],
         "originalPrice": 999,
@@ -236,32 +255,38 @@
             {
                 "id": 1,
                 "title": "repellendus id ullam",
-                "label": "Dolorem officiis temporibus."
+                "label": "Dolorem officiis temporibus.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/kgqvlow0-0/shoe/r/s/k/193914-puma-asphalt-silver-original-imafwx3a67x9mqek.jpeg?q=50"
             },
             {
                 "id": 2,
                 "title": "excepturi consequatur est",
-                "label": "Officia non provident dolor esse et neque."
+                "label": "Officia non provident dolor esse et neque.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/kjrh2fk0/shoe/p/z/w/11008678-6-fila-wht-blk-chn-rd-original-imafz9q43ahstzkn.jpeg?q=50"
             },
             {
                 "id": 3,
                 "title": "eius doloribus blanditiis",
-                "label": "Ut recusandae vel vitae molestiae id soluta."
+                "label": "Ut recusandae vel vitae molestiae id soluta.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/jw5a2kw0/shoe/e/d/4/ck9518-9-adidas-ftwwht-silvmt-original-imafgwkmggdznxf2.jpeg?q=50"
             },
             {
                 "id": 4,
                 "title": "nihil voluptates delectus",
-                "label": "Qui vel consequatur recusandae illo repellendus."
+                "label": "Qui vel consequatur recusandae illo repellendus.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/kg9qbgw0-0/shoe/r/j/n/380815-puma-burnt-olive-black-original-imafwgy4uh7xwrzb.jpeg?q=50"
             },
             {
                 "id": 5,
                 "title": "nemo dolorem necessitatibus",
-                "label": "Placeat odit velit itaque voluptatem."
+                "label": "Placeat odit velit itaque voluptatem.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k0463rk0/shoe/g/e/j/787-10-tying-blue-original-imafdk8vwfmfegfr.jpeg?q=50"
             },
             {
                 "id": 6,
                 "title": "dolorem quibusdam quasi",
-                "label": "Adipisci officiis repudiandae."
+                "label": "Adipisci officiis repudiandae.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k3lwuq80/shoe/z/v/h/mrj1324-6-aadi-black-original-imafmzfcjcjytgcf.jpeg?q=50"
             }
         ],
         "originalPrice": 3795,
@@ -308,32 +333,38 @@
             {
                 "id": 1,
                 "title": "repellendus id ullam",
-                "label": "Dolorem officiis temporibus."
+                "label": "Dolorem officiis temporibus.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k3lwuq80/shoe/z/v/h/mrj1324-6-aadi-black-original-imafmzfcjcjytgcf.jpeg?q=50"
             },
             {
                 "id": 2,
                 "title": "excepturi consequatur est",
-                "label": "Officia non provident dolor esse et neque."
+                "label": "Officia non provident dolor esse et neque.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k5vcya80/shoe/z/b/5/mrj1366-41-aadi-blue-original-imafz9xm47ngkqmn.jpeg?q=50"
             },
             {
                 "id": 3,
                 "title": "eius doloribus blanditiis",
-                "label": "Ut recusandae vel vitae molestiae id soluta."
+                "label": "Ut recusandae vel vitae molestiae id soluta.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k6l2vm80/shoe/e/f/x/black-shark-44-xylus-black-white-original-imafn43gg2ekq32j.jpeg?q=50"
             },
             {
                 "id": 4,
                 "title": "nihil voluptates delectus",
-                "label": "Qui vel consequatur recusandae illo repellendus."
+                "label": "Qui vel consequatur recusandae illo repellendus.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/jyvvgcw0/shoe/m/e/d/coscocgryblk-8-asian-grey-original-imafe3bnabzpqxgh.jpeg?q=50"
             },
             {
                 "id": 5,
                 "title": "nemo dolorem necessitatibus",
-                "label": "Placeat odit velit itaque voluptatem."
+                "label": "Placeat odit velit itaque voluptatem.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/jv2p6kw0/shoe/r/b/z/future-01clgrydgry-prime01cnblorng-6-asian-multicolor-original-imaeeb6txcwefcth.jpeg?q=50"
             },
             {
                 "id": 6,
                 "title": "dolorem quibusdam quasi",
-                "label": "Adipisci officiis repudiandae."
+                "label": "Adipisci officiis repudiandae.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k3lwuq80/shoe/z/v/h/mrj1324-6-aadi-black-original-imafmzfcjcjytgcf.jpeg?q=50"
             }
         ],
         "originalPrice": 1000,
@@ -386,32 +417,38 @@
             {
                 "id": 1,
                 "title": "repellendus id ullam",
-                "label": "Dolorem officiis temporibus."
+                "label": "Dolorem officiis temporibus.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/kfyasnk0-0/shoe/x/3/1/908988-002-nike-black-black-original-imafwauyhqtxfgx8.jpeg?q=50"
             },
             {
                 "id": 2,
                 "title": "excepturi consequatur est",
-                "label": "Officia non provident dolor esse et neque."
+                "label": "Officia non provident dolor esse et neque.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k3lwuq80/shoe/z/v/h/mrj1324-6-aadi-black-original-imafmzfcjcjytgcf.jpeg?q=50"
             },
             {
                 "id": 3,
                 "title": "eius doloribus blanditiis",
-                "label": "Ut recusandae vel vitae molestiae id soluta."
+                "label": "Ut recusandae vel vitae molestiae id soluta.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/kf8kvbk0-0/shoe/f/c/l/mrj1482-9-aadi-blue-original-imafvqw7hqcgguhe.jpeg?q=50"
             },
             {
                 "id": 4,
                 "title": "nihil voluptates delectus",
-                "label": "Qui vel consequatur recusandae illo repellendus."
+                "label": "Qui vel consequatur recusandae illo repellendus.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/kgtqhe80-0/shoe/w/p/r/la5460-9-layasa-grey-original-imafwysjghfsjcfh.jpeg?q=50"
             },
             {
                 "id": 5,
                 "title": "nemo dolorem necessitatibus",
-                "label": "Placeat odit velit itaque voluptatem."
+                "label": "Placeat odit velit itaque voluptatem.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/ki96c280-0/shoe/m/y/p/bouncer-01cnavyorng-6-wilto-navy-original-imafy3ftqsks7dys.jpeg?q=50"
             },
             {
                 "id": 6,
                 "title": "dolorem quibusdam quasi",
-                "label": "Adipisci officiis repudiandae."
+                "label": "Adipisci officiis repudiandae.",
+                "image": "https://rukminim1.flixcart.com/image/660/792/k5o7r0w0/shoe/h/z/3/d-5520-10-dman-black-original-imafhtsmfbkkhce2.jpeg?q=50"
             }
         ],
         "originalPrice": 2799,
@@ -446,5 +483,165 @@
             "7",
             "8"
         ]
+    },
+    {
+        "id": "product_id_7",
+        "title": "HP 14 Core i5 10th Gen - (8 GB/512 GB SSD/Windows 10 Home) 14-ck2018TU Thin and Light Laptop  (14 inch, Jet Black, 1.47 kg, With MS Office)",
+        "image": "https://rukminim1.flixcart.com/image/312/312/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zjggumtu7p.jpeg?q=70",
+        "brand": "hp",
+        "description": "Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.",
+        "offer": "4",
+        "category": "laptop",
+        "currency": "INR",
+        "rating": 4,
+        "stock": 9,
+        "gallery": [
+            {
+                "id": 1,
+                "title": "repellendus id ullam",
+                "label": "Dolorem officiis temporibus.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zj2j6xevzr.jpeg?q=70"
+            },
+            {
+                "id": 2,
+                "title": "excepturi consequatur est",
+                "label": "Officia non provident dolor esse et neque.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zjnzzuybhf.jpeg?q=70"
+            },
+            {
+                "id": 3,
+                "title": "eius doloribus blanditiis",
+                "label": "Ut recusandae vel vitae molestiae id soluta.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zjqqzruent.jpeg?q=70"
+            },
+            {
+                "id": 4,
+                "title": "nihil voluptates delectus",
+                "label": "Qui vel consequatur recusandae illo repellendus.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zjsrwgyywm.jpeg?q=70"
+            },
+            {
+                "id": 5,
+                "title": "nemo dolorem necessitatibus",
+                "label": "Placeat odit velit itaque voluptatem.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zj2j6xevzr.jpeg?q=70"
+            },
+            {
+                "id": 6,
+                "title": "dolorem quibusdam quasi",
+                "label": "Adipisci officiis repudiandae.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zj2j6xevzr.jpeg?q=70"
+            }
+        ],
+        "originalPrice": 50098,
+        "currentPrice": 47990,
+        "features": []
+    },
+
+    {
+        "id": "product_id_8",
+        "title": "ASUS VivoBook 15 Core i5 10th Gen - (8 GB/1 TB HDD/Windows 10 Home) X515JA-EJ501T Thin and Light Laptop  (15.6 inch, Slate Grey, 1.80 kg)",
+        "image": "https://rukminim1.flixcart.com/image/416/416/kjn6qvk0/computer/c/t/6/asus-original-imafz5wqf7z8xxga.jpeg?q=70",
+        "brand": "asus",
+        "description": "Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.",
+        "offer": "25",
+        "category": "laptop",
+        "currency": "INR",
+        "rating": 4,
+        "stock": 9,
+        "gallery": [
+            {
+                "id": 1,
+                "title": "repellendus id ullam",
+                "label": "Dolorem officiis temporibus.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zj2j6xevzr.jpeg?q=70"
+            },
+            {
+                "id": 2,
+                "title": "excepturi consequatur est",
+                "label": "Officia non provident dolor esse et neque.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zjnzzuybhf.jpeg?q=70"
+            },
+            {
+                "id": 3,
+                "title": "eius doloribus blanditiis",
+                "label": "Ut recusandae vel vitae molestiae id soluta.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zjqqzruent.jpeg?q=70"
+            },
+            {
+                "id": 4,
+                "title": "nihil voluptates delectus",
+                "label": "Qui vel consequatur recusandae illo repellendus.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zjsrwgyywm.jpeg?q=70"
+            },
+            {
+                "id": 5,
+                "title": "nemo dolorem necessitatibus",
+                "label": "Placeat odit velit itaque voluptatem.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zj2j6xevzr.jpeg?q=70"
+            },
+            {
+                "id": 6,
+                "title": "dolorem quibusdam quasi",
+                "label": "Adipisci officiis repudiandae.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zj2j6xevzr.jpeg?q=70"
+            }
+        ],
+        "originalPrice": 57990,
+        "currentPrice": 42990,
+        "features": []
+    },
+    {
+        "id": "product_id_9",
+        "title": "lenovo Ideapad S145 Ryzen 5 Quad Core 3500U - (8 GB/512 GB SSD/Windows 10 Home) S145-15API Laptop  (15.6 inch, Platinum Grey, 1.85 kg, With MS Office)",
+        "image": "https://rukminim1.flixcart.com/image/416/416/kjn6qvk0/computer/c/t/6/asus-original-imafz5wqf7z8xxga.jpeg?q=70",
+        "brand": "asus",
+        "description": "Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.",
+        "offer": "25",
+        "category": "laptop",
+        "currency": "INR",
+        "rating": 4,
+        "stock": 9,
+        "gallery": [
+            {
+                "id": 1,
+                "title": "repellendus id ullam",
+                "label": "Dolorem officiis temporibus.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zj2j6xevzr.jpeg?q=70"
+            },
+            {
+                "id": 2,
+                "title": "excepturi consequatur est",
+                "label": "Officia non provident dolor esse et neque.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zjnzzuybhf.jpeg?q=70"
+            },
+            {
+                "id": 3,
+                "title": "eius doloribus blanditiis",
+                "label": "Ut recusandae vel vitae molestiae id soluta.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zjqqzruent.jpeg?q=70"
+            },
+            {
+                "id": 4,
+                "title": "nihil voluptates delectus",
+                "label": "Qui vel consequatur recusandae illo repellendus.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zjsrwgyywm.jpeg?q=70"
+            },
+            {
+                "id": 5,
+                "title": "nemo dolorem necessitatibus",
+                "label": "Placeat odit velit itaque voluptatem.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zj2j6xevzr.jpeg?q=70"
+            },
+            {
+                "id": 6,
+                "title": "dolorem quibusdam quasi",
+                "label": "Adipisci officiis repudiandae.",
+                "image": "https://rukminim1.flixcart.com/image/416/416/k33c4nk0/computer/x/2/v/hp-na-original-imafk9zj2j6xevzr.jpeg?q=70"
+            }
+        ],
+        "originalPrice": 57990,
+        "currentPrice": 42990,
+        "features": []
     }
 ]
