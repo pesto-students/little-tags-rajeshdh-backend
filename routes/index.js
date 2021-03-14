@@ -51,6 +51,16 @@ router.post('/cart', (req, res) => {
   res.send(results)
 })
 
+router.post('/order-history', (req, res) => {
+  const cartItems = req.body
+  const results = products.filter(product => cartItems.includes(product.id))
+  const resultUpdated = results.map(product => {
+    product.orderDate = randomTime(new Date("01-10-2019 10:30"), new Date("01-10-2021 02:10"))
+    return product
+  })
+  res.send(resultUpdated)
+})
+
 router.post('/wishlist', (req, res) => {
   const cartItems = req.body
   const results = products.filter(product => cartItems.includes(product.id))
@@ -60,5 +70,12 @@ router.post('/wishlist', (req, res) => {
   res.send(response)
 })
 
+
+function randomTime(start, end) {
+  var diff = end.getTime() - start.getTime();
+  var new_diff = diff * Math.random();
+  var date = new Date(start.getTime() + new_diff);
+  return date;
+}
 
 module.exports = router;
