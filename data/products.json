@@ -90,6 +90,7 @@
         "category": "shoe",
         "currency": "INR",
         "rating": 4,
+        "noOfReview": 7,
         "stock": 3,
         "gallery": [
             {
@@ -174,6 +175,7 @@
         "category": "shoe",
         "currency": "INR",
         "rating": 5,
+        "noOfReview": 10, 
         "stock": 9,
         "gallery": [
             {
@@ -250,6 +252,7 @@
         "category": "shoe",
         "currency": "INR",
         "rating": 4,
+        "noOfReview": 15, 
         "stock": 9,
         "gallery": [
             {
@@ -328,6 +331,7 @@
         "category": "shoe",
         "currency": "INR",
         "rating": 3,
+        "noOfReview": 10, 
         "stock": 4,
         "gallery": [
             {
@@ -412,6 +416,7 @@
         "category": "shoe",
         "currency": "INR",
         "rating": 5,
+        "noOfReview": 13, 
         "stock": 9,
         "gallery": [
             {
@@ -494,6 +499,7 @@
         "category": "laptop",
         "currency": "INR",
         "rating": 4,
+        "noOfReview": 16, 
         "stock": 9,
         "gallery": [
             {
@@ -548,6 +554,7 @@
         "category": "laptop",
         "currency": "INR",
         "rating": 4,
+        "noOfReview": 20, 
         "stock": 9,
         "gallery": [
             {
@@ -601,6 +608,7 @@
         "category": "laptop",
         "currency": "INR",
         "rating": 4,
+        "noOfReview": 10, 
         "stock": 9,
         "gallery": [
             {
@@ -643,5 +651,121 @@
         "originalPrice": 57990,
         "currentPrice": 42990,
         "features": []
+    },
+    {
+        "id": "product_id_hat_5",
+        "title": "Stylish Black Cotton Hip Hop Snapback Cap",
+        "image": "https://rukminim1.flixcart.com/image/1760/1760/jlo1tow0/cap/h/s/z/free-v144-alamos-original-imaf3dsgfe4hz2au.jpeg?q=90",
+        "brand": "BEZAL",
+        "description": "Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.",
+        "offer": "10",
+        "category": "hats",
+        "currency": "INR",
+        "rating": 3,
+        "noOfReview": 10, 
+        "stock": 4,
+        "gallery": [
+            {
+                "id": 1,
+                "title": "repellendus id ullam",
+                "label": "Dolorem officiis temporibus.",
+                "image": "https://rukminim1.flixcart.com/image/128/128/jlo1tow0/cap/h/s/z/free-v144-alamos-original-imaf3dsgfe4hz2au.jpeg?Q=70"
+            },
+            {
+                "id": 2,
+                "title": "excepturi consequatur est",
+                "label": "Officia non provident dolor esse et neque.",
+                "image": "https://rukminim1.flixcart.com/image/880/1056/jle1qq80/cap/w/6/p/free-v145-babji-original-imaf3dszhdxbw6wk.jpeg?q=50"
+            },
+            {
+                "id": 5,
+                "title": "nemo dolorem necessitatibus",
+                "label": "Placeat odit velit itaque voluptatem.",
+                "image": "https://rukminim1.flixcart.com/image/880/1056/jh2aqvk0/cap/n/e/3/free-y152-alamos-original-imaf3g3hypfuugrz.jpeg?q=50"
+            },
+            {
+                "id": 6,
+                "title": "dolorem quibusdam quasi",
+                "label": "Adipisci officiis repudiandae.",
+                "image": "https://rukminim1.flixcart.com/image/880/1056/jh3q6q80/cap/n/m/k/free-z153ny-black-logo-alamos-original-imaf3dtbntqv4ykg.jpeg?q=50"
+            }
+        ],
+        "originalPrice": 310,
+        "currentPrice": 225,
+        "features": [
+            {
+                "type": "color",
+                "value": [
+                    "rgb(6,6,6)"
+                ]
+            },
+            {
+                "type": "size",
+                "value": [
+                    "free"
+                ]
+            }
+        ],
+        "colors": [
+            "rgb(6,6,6)"
+        ],
+        "sizes": [
+            "free"
+        ]
+    },
+    {
+        "id": "product_id_hat_6",
+        "title": "sports cap Cap  (Pack of 2)",
+        "image": "https://rukminim1.flixcart.com/image/880/1056/k7ksvww0/cap/v/c/9/free-black-white1virat-dedicated-original-imafprjddqshe9hx.jpeg?q=50",
+        "brand": "BEZAL",
+        "description": "Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.",
+        "offer": "10",
+        "category": "hats",
+        "currency": "INR",
+        "rating": 3,
+        "noOfReview": 10, 
+        "stock": 4,
+        "gallery": [
+            {
+                "id": 1,
+                "title": "repellendus id ullam",
+                "label": "Dolorem officiis temporibus.",
+                "image": "https://rukminim1.flixcart.com/image/128/128/k7ksvww0/cap/v/c/9/free-black-white1virat-dedicated-original-imafprjddqshe9hx.jpeg?q=70"
+            },
+            {
+                "id": 2,
+                "title": "excepturi consequatur est",
+                "label": "Officia non provident dolor esse et neque.",
+                "image": "https://rukminim1.flixcart.com/image/128/128/k7ksvww0/cap/v/c/9/free-black-white1virat-dedicated-original-imafprjdvgvsqzxs.jpeg?q=70"
+            },
+            {
+                "id": 5,
+                "title": "nemo dolorem necessitatibus",
+                "label": "Placeat odit velit itaque voluptatem.",
+                "image": "https://rukminim1.flixcart.com/image/128/128/k6s82vk0/cap/f/p/3/free-combo-virat-jamont-original-imafp5h9jjtnaag3.jpeg?q=70"
+            }
+        ],
+        "originalPrice": 699,
+        "currentPrice": 425,
+        "features": [
+            {
+                "type": "color",
+                "value": [
+                    "rgb(6,6,6)"
+                ]
+            },
+            {
+                "type": "size",
+                "value": [
+                    "free"
+                ]
+            }
+        ],
+        "colors": [
+            "rgb(6,6,6)"
+        ],
+        "sizes": [
+            "free"
+        ]
     }
 ]
