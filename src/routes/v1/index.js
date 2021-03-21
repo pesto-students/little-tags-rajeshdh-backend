@@ -12,7 +12,7 @@ router.get('/__test', function (req, res) {
 
 const defaultRoutes = [
   {
-    path: '/product',
+    path: '/products',
     route: productRoute,
   },
 ];
