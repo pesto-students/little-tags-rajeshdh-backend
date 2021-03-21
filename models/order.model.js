@@ -1,4 +1,8 @@
-const OrderSchema = mongoose.Schema({
+const mongoose = require("mongoose");
+const { toJSON, paginate } = require('./plugins');
+const { Schema } = mongoose;
+
+const OrderSchema = Schema({
   status: {
     type: String,
     required: true,
@@ -73,5 +77,8 @@ const OrderSchema = mongoose.Schema({
 {
   timestamps: true,
 });
+
+OrderSchema.plugin(toJSON);
+OrderSchema.plugin(paginate);
 
 module.exports = mongoose.model(" Order", OrderSchema);

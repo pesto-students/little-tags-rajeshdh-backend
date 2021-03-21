@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+const { toJSON, paginate } = require('./plugins');
 const { Schema } = mongoose;
 
 const ProductSchema = new Schema({
@@ -63,5 +64,7 @@ const ProductSchema = new Schema({
     }
   }
 });
+ProductSchema.plugin(toJSON);
+ProductSchema.plugin(paginate);
 
 module.exports = mongoose.model("Product", ProductSchema);

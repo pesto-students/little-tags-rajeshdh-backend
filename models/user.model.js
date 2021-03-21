@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
+const { toJSON, paginate } = require('./plugins');
+const { Schema } = mongoose;
 
-const UserSchema = mongoose.Schema({
+const UserSchema = Schema({
   username: {
     type: String,
     required: true
@@ -22,5 +24,9 @@ const UserSchema = mongoose.Schema({
     required: true
   }
 }, {timestamps: true});
+
+UserSchema.plugin(toJSON);
+UserSchema.plugin(paginate);
+
 
 module.exports = mongoose.model('User', UserSchema);
