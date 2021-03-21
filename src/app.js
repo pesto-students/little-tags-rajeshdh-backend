@@ -7,7 +7,8 @@ const cors = require('cors');
 require('dotenv').config();
 const connectDB = require('./config/db');
 
-const indexRouter = require('./routes/v1/index');
+const v1Router = require('./routes/v1/index');
+const v0Router = require('./routes/index');
 
 const app = express();
 
@@ -39,7 +40,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/v1', indexRouter);
+app.use('/', v0Router);
+app.use('/v1', v1Router);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
