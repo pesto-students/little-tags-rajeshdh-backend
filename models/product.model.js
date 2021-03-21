@@ -1,45 +1,47 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
+
 const { toJSON, paginate } = require('./plugins');
+
 const { Schema } = mongoose;
 
 const ProductSchema = new Schema({
   title: {
     type: String,
-    required: true
+    required: true,
   },
-  image:  {
+  image: {
     type: String,
-    required: true
+    required: true,
   },
-  brand:  {
+  brand: {
     type: String,
-    required: true
+    required: true,
   },
-  description:  {
+  description: {
     type: String,
-    required: true
+    required: true,
   },
   rating: Number,
   noOfReview: Number,
   stock: Number,
   features: [
     {
-      type:  {
+      type: {
         type: String,
-        required: true
+        required: true,
       },
       value: [String],
     },
   ],
   gallery: [
     {
-      title:  {
+      title: {
         type: String,
-        required: true
+        required: true,
       },
-      image:  {
+      image: {
         type: String,
-        required: true
+        required: true,
       },
     },
   ],
@@ -48,23 +50,21 @@ const ProductSchema = new Schema({
   offer: Number,
   currency: {
     type: String,
-    enum: [
-     'INR','USD'
-    ],
-    default: 'INR'
+    enum: ['INR', 'USD'],
+    default: 'INR',
   },
   category: {
     name: {
       type: String,
-      required: true
+      required: true,
     },
     categoryId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Category'
-    }
-  }
+      ref: 'Category',
+    },
+  },
 });
 ProductSchema.plugin(toJSON);
 ProductSchema.plugin(paginate);
 
-module.exports = mongoose.model("Product", ProductSchema);
+module.exports = mongoose.model('Product', ProductSchema);

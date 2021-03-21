@@ -5,7 +5,7 @@
  *  - removes __v, createdAt, updatedAt, and any path that has private: true
  *  - replaces _id with id
  *  Credits: https://github.com/hagopj13/node-express-boilerplate/blob/master/src/models/plugins/toJSON.plugin.js
- */ 
+ */
 
 const deleteAtPath = (obj, path, index) => {
   if (index === path.length - 1) {
