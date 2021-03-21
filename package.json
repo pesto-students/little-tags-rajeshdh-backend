@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --check **/*.js",
+    "prettier:fix": "prettier --write **/*.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,7 +17,19 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "mongoose": "^5.12.1",
-    "morgan": "~1.9.1",
-    "nodemon": "^2.0.7"
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^24.0.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-security": "^1.4.0",
+    "husky": "^5.1.2",
+    "lint-staged": "^10.0.7",
+    "nodemon": "^2.0.0",
+    "prettier": "^2.0.5"
   }
 }
