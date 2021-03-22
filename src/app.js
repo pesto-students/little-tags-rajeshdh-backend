@@ -1,9 +1,16 @@
-const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
+const passport = require('passport');
+const httpStatus = require('http-status');
+const config = require('./config/config');
+const morgan = require('./config/morgan');
+const { jwtStrategy } = require('./config/passport');
+const { authLimiter } = require('./middlewares/rateLimiter');
+const { errorConverter, errorHandler } = require('./middlewares/error');
+const ApiError = require('./utils/ApiError');
 require('dotenv').config();
 const connectDB = require('./config/db');
 
@@ -12,10 +19,8 @@ const v0Router = require('./routes/index');
 
 const app = express();
 
+// connect database
 connectDB();
-// // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
 
 const whiteList = ['http://127.0.0.1:3000', 'http://localhost:3000', 'https://little-tags-pesto.netlify.app'];
 app.use(
@@ -24,7 +29,7 @@ app.use(
       if (!origin) {
         return callback(null, true);
       }
-      const message = `The CORS policy for this origin doesn't 
+      const message = `The CORS policy for this origin doesn't
     allow access from the particular origin.`;
       if (!whiteList.includes(origin)) {
         return callback(new TypeError(message), false);
@@ -33,6 +38,20 @@ app.use(
     },
   })
 );
+
+if (config.env !== 'test') {
+  app.use(morgan.successHandler);
+  app.use(morgan.errorHandler);
+}
+
+// jwt authentication
+app.use(passport.initialize());
+passport.use('jwt', jwtStrategy);
+
+// limit repeated failed requests to auth endpoints
+if (config.env === 'production') {
+  app.use('/v1/auth', authLimiter);
+}
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -43,11 +62,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', v0Router);
 app.use('/v1', v1Router);
 
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
+// send back a 404 error for any unknown api request
+app.use((req, res, next) => {
+  next(new ApiError(httpStatus.NOT_FOUND, 'Not found'));
 });
 
+// convert error to ApiError, if needed
+app.use(errorConverter);
+
+// handle error
+app.use(errorHandler);
 // error handler
 app.use(function (err, req, res) {
   // set locals, only providing error in development
