@@ -22,7 +22,12 @@ const app = express();
 // connect database
 connectDB();
 
-const whiteList = ['http://127.0.0.1:3000', 'http://localhost:3000', 'https://little-tags-pesto.netlify.app'];
+const whiteList = [
+  'http://127.0.0.1:3000',
+  'http://localhost:3000',
+  'https://little-tags-pesto.netlify.app',
+  'https://shopay-store.netlify.app',
+];
 app.use(
   cors({
     origin(origin, callback) {
