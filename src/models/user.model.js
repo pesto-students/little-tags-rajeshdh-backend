@@ -40,6 +40,36 @@ const userSchema = mongoose.Schema(
       enum: roles,
       default: 'user',
     },
+    whislist: [
+      {
+        productId: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'Product',
+        },
+        name: String,
+      },
+    ],
+    cart: [
+      {
+        productId: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'Product',
+        },
+        quantity: {
+          type: Number,
+          required: true,
+        },
+        name: String,
+        price: Number,
+        // size, color, etc.
+        features: [
+          {
+            type: String,
+            value: String,
+          },
+        ],
+      },
+    ],
   },
   {
     timestamps: true,
