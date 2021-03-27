@@ -40,7 +40,7 @@ const userSchema = mongoose.Schema(
       enum: roles,
       default: 'user',
     },
-    whislist: [
+    wishlist: [
       {
         productId: {
           type: mongoose.Schema.Types.ObjectId,
@@ -104,7 +104,7 @@ userSchema.methods.isPasswordMatch = async function (password) {
 userSchema.pre('save', async function (next) {
   const user = this;
   if (user.isModified('password')) {
-    user.password = await bcrypt.hash(user.password, 8);
+    user.password = await bcrypt.hash(user.password, 8); //TODO change to above 12
   }
   next();
 });
