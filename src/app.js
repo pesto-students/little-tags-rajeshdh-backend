@@ -17,6 +17,10 @@ const connectDB = require('./config/db');
 const v1Router = require('./routes/v1/index');
 const v0Router = require('./routes/index');
 
+const adminRoutes = require('./routes/admin/index')
+
+const expressLayouts = require('express-ejs-layouts');
+
 const app = express();
 
 // connect database
@@ -56,7 +60,13 @@ passport.use('jwt', jwtStrategy);
 // limit repeated failed requests to auth endpoints
 if (config.env === 'production') {
   app.use('/v1/auth', authLimiter);
+  app.use('/admin/auth', authLimiter);
 }
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+app.use(expressLayouts);
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -66,6 +76,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', v0Router);
 app.use('/v1', v1Router);
+app.use('/admin', adminRoutes);
 
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {
