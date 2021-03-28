@@ -5,6 +5,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const passport = require('passport');
 const httpStatus = require('http-status');
+const expressLayouts = require('express-ejs-layouts');
 const config = require('./config/config');
 const morgan = require('./config/morgan');
 const { jwtStrategy } = require('./config/passport');
@@ -17,9 +18,7 @@ const connectDB = require('./config/db');
 const v1Router = require('./routes/v1/index');
 const v0Router = require('./routes/index');
 
-const adminRoutes = require('./routes/admin/index')
-
-const expressLayouts = require('express-ejs-layouts');
+const adminRoutes = require('./routes/admin/index');
 
 const app = express();
 
@@ -68,7 +67,6 @@ if (config.env === 'production') {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
-
 
 app.use(logger('dev'));
 app.use(express.json());
