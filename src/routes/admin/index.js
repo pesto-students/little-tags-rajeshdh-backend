@@ -2,11 +2,12 @@ const express = require('express');
 const authRoute = require('./auth.route');
 const userRoute = require('./user.route');
 const productRoute = require('./products.route');
+const categoryRoute = require('./category.route');
 
 const catchAsync = require('../../utils/catchAsync');
 
 const { getUserCount } = require('../../controllers/user.controller');
-const { getCategoryCount } = require('../../controllers/category.controller');
+const { getCategoryCount } = require('../../controllers/admin/category.controller');
 const { getProductCount } = require('../../controllers/product.controller');
 
 const router = express.Router();
@@ -39,6 +40,10 @@ const defaultRoutes = [
   {
     path: '/products',
     route: productRoute,
+  },
+  {
+    path: '/category',
+    route: categoryRoute,
   },
 ];
 
