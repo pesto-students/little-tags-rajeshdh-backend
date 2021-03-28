@@ -6,4 +6,48 @@
       <li class="breadcrumb-item active" aria-current="page">Categories</li>
     </ol>
   </nav>
+
+  <div class="pb-5">
+    <a href="/admin/category/create" class="btn btn-primary float-right">Create</a>
+  </div>
+
+  <% if(typeof(message) !== "undefined") { %>
+  <div class="alert p-3 <% if(error) { %> alert-danger<% } else { %> alert-success <% }%>"><%= message %></div>
+  <% } %>
+
+  <table class="table align-middle table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Image</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% results.forEach(function(result,index) { %>
+      <tr>
+        <th class="align-middle" scope="row"><%= ((page-1)*10)+(index+1) %></th>
+        <td class="align-middle"><%= result.name %></td>
+        <td>
+          <img src="<%= result.image %>" height="70" />
+        </td>
+        <td class="align-middle"></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <nav aria-label="...">
+    <ul class="pagination pagination-sm">
+      <% for(var paginate = 1; paginate<=totalPages;paginate++) { %> 
+        <% if(page==paginate){ %>
+        <li class="page-item active" aria-current="page">
+          <span class="page-link"><%= paginate %> </span>
+        </li>
+        <% }else{ %>
+        <li class="page-item"><a class="page-link" href="/admin/category?page=<%= paginate %>"><%= paginate %></a></li>
+        <% } %> 
+      <% } %>
+    </ul>
+  </nav>
 </div>

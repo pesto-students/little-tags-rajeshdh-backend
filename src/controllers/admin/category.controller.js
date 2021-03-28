@@ -9,9 +9,24 @@ const getCategories = catchAsync(async (req, res) => {
   res.render('category/index', result);
 });
 
+const createCategory = catchAsync(async (req, res) => {
+  const category = await categoryService.createCategory(req.body);
+  const data = {};
+  if (category) {
+    data.error = false;
+    data.message = "Category Created";
+  } else {
+    data.error = true;
+    data.message = "An error occurred";
+  }
+  res.render('category/index', data);
+})
+
+
 const getCategoryCount = () => categoryService.getCategoryCount();
 
 module.exports = {
   getCategoryCount,
   getCategories,
+  createCategory,
 };
