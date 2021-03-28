@@ -1,8 +1,8 @@
 # SHOPAY Backend API
 
-<div align="center">
-Node.js backend for [SHOPAY](https://shopay-store.netlify.app/) an online flea market using mongodb database, passport and passport-jwt for user authentication.
-</div>
+
+Node.js backend for [SHOPAY](https://shopay-store.netlify.app) an online flea market using mongodb database, passport and passport-jwt for user authentication.
+
 
 ## ⚒️ Build Setup 
 

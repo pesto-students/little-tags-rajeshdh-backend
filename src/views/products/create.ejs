@@ -1,0 +1,78 @@
+<body class="bg-default">
+  <div class="main-content">
+    <!-- Page content -->
+    <div class="container mt--8 pb-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+          <div class="card shadow border-0">
+            <div class="card-body px-lg-5 py-lg-5">
+              <div class="text-center text-muted mb-4">
+                <h6 class="text-uppercase ls-1 mb-1">Add a new product</h6>
+              </div>
+              <form role="form" action="register" method="POST">
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <input class="form-control" name="title" placeholder="Title" type="text" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <input class="form-control" name="brand" placeholder="Brand" type="text" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <select class="form-control" name="category" id="category" aria-label="Select Category">
+                      <option selected>Select Category</option>
+               
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <textarea class="form-control" name="description" placeholder="Description" type="text" required></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <input class="form-control" name="brand" placeholder="Brand" type="text" required />
+                  </div>
+                </div>
+                
+                <div class="form-group" id="color-container">
+                  <div class="input-group input-group-alternative mb-3" >
+                    <label for="color" class="form-label mr-2">Color:</label>
+                    <input class="form-control" name="color[0]" placeholder="Color" type="color" />
+                    <input type="button" value="Add" onclick="addColorInput(0)"/>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <input class="form-control" name="stock" placeholder="Stock" type="text" required />
+                  </div>
+                </div>
+             
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <input class="form-control" name="originalPrice" placeholder="Original Price" type="text" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <input class="form-control" name="discount" placeholder="Discount" type="text" required />
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <button class="btn btn-primary mt-4">Create product</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/products.js"></script>
+</body>
