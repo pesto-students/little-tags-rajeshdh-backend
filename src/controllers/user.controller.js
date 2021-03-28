@@ -11,6 +11,9 @@ const getUser = catchAsync(async (req, res) => {
   res.send(user);
 });
 
+const getUserCount = () => userService.getUserCount();
+
 module.exports = {
   getUser,
+  getUserCount,
 };

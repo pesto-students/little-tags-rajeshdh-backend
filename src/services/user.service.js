@@ -32,8 +32,11 @@ const getUserByEmail = async (email) => {
   return User.findOne({ email });
 };
 
+const getUserCount = () => User.countDocuments({ role: 'user' });
+
 module.exports = {
   createUser,
   getUserById,
   getUserByEmail,
+  getUserCount,
 };
