@@ -5,6 +5,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const passport = require('passport');
 const httpStatus = require('http-status');
+const expressLayouts = require('express-ejs-layouts');
 const config = require('./config/config');
 const morgan = require('./config/morgan');
 const { jwtStrategy } = require('./config/passport');
@@ -17,9 +18,7 @@ const connectDB = require('./config/db');
 const v1Router = require('./routes/v1/index');
 const v0Router = require('./routes/index');
 
-const adminRoutes = require('./routes/admin/index')
-
-const expressLayouts = require('express-ejs-layouts');
+const adminRoutes = require('./routes/admin/index');
 
 const app = express();
 
@@ -29,6 +28,8 @@ connectDB();
 const whiteList = [
   'http://127.0.0.1:3000',
   'http://localhost:3000',
+  'http://127.0.0.1:3001',
+  'http://localhost:3001',
   'https://little-tags-pesto.netlify.app',
   'https://shopay-store.netlify.app',
 ];
@@ -67,12 +68,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', v0Router);
 app.use('/v1', v1Router);

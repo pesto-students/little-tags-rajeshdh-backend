@@ -65,10 +65,13 @@ const deleteProductById = async (productId) => {
   return product;
 };
 
+const getProductCount = () => Product.estimatedDocumentCount();
+
 module.exports = {
   createProduct,
   queryProducts,
   getProductById,
   updateProductById,
   deleteProductById,
+  getProductCount,
 };

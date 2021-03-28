@@ -1,21 +1,47 @@
-const express = require('express')
+const express = require('express');
 const authRoute = require('./auth.route');
-const auth = require('../../middlewares/auth');
+const userRoute = require('./user.route');
+const productRoute = require('./products.route');
 
-const router = express.Router()
+const catchAsync = require('../../utils/catchAsync');
 
-router.get('/', auth(), (req, res) => {
-    console.log("im here ");
-    res.send("Dashboard");
-});
+const { getUserCount } = require('../../controllers/user.controller');
+const { getCategoryCount } = require('../../controllers/category.controller');
+const { getProductCount } = require('../../controllers/product.controller');
+
+const router = express.Router();
+
+router.get(
+  '/',
+  catchAsync(async (req, res) => {
+    const userCount = await getUserCount();
+    const productCount = await getProductCount();
+    const categoryCount = await getCategoryCount();
+    const data = {
+      userCount,
+      productCount,
+      categoryCount,
+    };
+
+    res.render('dashboard/index', data);
+  })
+);
 
 const defaultRoutes = [
-    {
-        path: '/auth',
-        route: authRoute
-    }
-]
+  {
+    path: '/auth',
+    route: authRoute,
+  },
+  {
+    path: '/users',
+    route: userRoute,
+  },
+  {
+    path: '/products',
+    route: productRoute,
+  },
+];
 
-defaultRoutes.forEach(route => router.use(route.path, route.route))
+defaultRoutes.forEach((route) => router.use(route.path, route.route));
 
 module.exports = router;
