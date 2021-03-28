@@ -50,6 +50,20 @@ const updateCategoryById = async (categoryId, updateBody) => {
   return category;
 };
 
+/**
+ * Delete product by id
+ * @param {ObjectId} categoryId
+ * @returns {Promise<Product>}
+ */
+const deleteCategoryById = async (categoryId) => {
+  const category = await getCategoryById(categoryId);
+  if (!category) {
+    return false;
+  }
+  await category.remove();
+  return category;
+};
+
 const getCategoryCount = () => Category.estimatedDocumentCount();
 
 module.exports = {
@@ -58,4 +72,5 @@ module.exports = {
   createCategory,
   getCategoryById,
   updateCategoryById,
+  deleteCategoryById,
 };

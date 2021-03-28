@@ -1,45 +1,70 @@
+const queryString = require('querystring')
+
 const { categoryService } = require('../../services');
 const catchAsync = require('../../utils/catchAsync');
 const pick = require('../../utils/pick');
 
-const getCategories = catchAsync(async (req, res) => {
+const categoryDetails = (req) => {
   const filter = pick(req.query, ['name', 'role']);
   const options = pick(req.query, ['sortBy', 'limit', 'page']);
-  const result = await categoryService.queryCategories(filter, options);
-  res.render('category/index', result);
+  return categoryService.queryCategories(filter, options);
+}
+
+const getCategories = catchAsync(async (req, res) => {
+  const result = await categoryDetails(req);
+  const queries = { ...req.query };
+  res.render('category/index', { ...result, ...queries });
 });
 
 const createCategory = catchAsync(async (req, res) => {
-  const filter = pick(req.query, ['name', 'role']);
-  const options = pick(req.query, ['sortBy', 'limit', 'page']);
-  const result = await categoryService.queryCategories(filter, options);
   const category = await categoryService.createCategory(req.body);
-  const data = {};
+  let query = "";
   if (category) {
-    data.error = false;
-    data.message = 'Category Created';
+    query = queryString.stringify({
+      "error": false,
+      "message": 'Category Created',
+    });
   } else {
-    data.error = true;
-    data.message = 'An error occurred';
+    query = queryString.stringify({
+      "error": true,
+      "message": 'An error occurred',
+    });
   }
-  res.render('category/index', { ...data, ...result });
+  res.redirect('/admin/category?' + query);
 });
 
 const updateCategory = catchAsync(async (req, res) => {
-  const filter = pick(req.query, ['name', 'role']);
-  const options = pick(req.query, ['sortBy', 'limit', 'page']);
-  const result = await categoryService.queryCategories(filter, options);
   const category = await categoryService.updateCategoryById(req.params.id, req.body)
-  const data = {};
+  let query = "";
   if (category) {
-    data.error = false;
-    data.message = 'Category Updated';
+    query = queryString.stringify({
+      "error": false,
+      "message": 'Category Updated',
+    });
   } else {
-    data.error = true;
-    data.message = 'An error occurred';
+    query = queryString.stringify({
+      "error": true,
+      "message": 'An error occurred',
+    });
   }
+  res.redirect('/admin/category?' + query);
+});
 
-  res.render('category/index', { ...data, ...result });
+const deleteCategory = catchAsync(async (req, res) => {
+  const category = await categoryService.deleteCategoryById(req.params.id);
+  let query = "";
+  if (category) {
+    query = queryString.stringify({
+      "error": false,
+      "message": 'Category Deleted',
+    });
+  } else {
+    query = queryString.stringify({
+      "error": true,
+      "message": 'An error occurred',
+    });
+  }
+  res.redirect('/admin/category?' + query);
 });
 
 const getCategoryCount = () => categoryService.getCategoryCount();
@@ -49,4 +74,5 @@ module.exports = {
   getCategories,
   createCategory,
   updateCategory,
+  deleteCategory,
 };

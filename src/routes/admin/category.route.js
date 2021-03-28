@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { getCategories, createCategory, updateCategory } = require('../../controllers/admin/category.controller');
+const { getCategories, createCategory, updateCategory, deleteCategory } = require('../../controllers/admin/category.controller');
 const { getCategoryById } = require('../../services/category.service');
 
 const router = express.Router();
@@ -18,7 +18,8 @@ router.get('/update/:id', async (req, res) => {
   res.render('category/form', category);
 });
 
-router.post('/update/:id', updateCategory)
+router.post('/update/:id', updateCategory);
 
+router.post('/delete/:id', deleteCategory);
 
 module.exports = router;
