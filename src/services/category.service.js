@@ -25,10 +25,37 @@ const queryCategories = (filter, options) => {
   return Category.paginate(filter, options);
 };
 
+/**
+ * Get category by id
+ * @param {ObjectId} id
+ * @returns {Promise<Category>}
+ */
+const getCategoryById = (id) => {
+  return Category.findById(id);
+};
+
+/**
+ * Update category by id
+ * @param {ObjectId} categoryId
+ * @param {Object} updateBody
+ * @returns {Promise<Category>}
+ */
+const updateCategoryById = async (categoryId, updateBody) => {
+  const category = await getCategoryById(categoryId);
+  if (!category) {
+    return false;
+  }
+  Object.assign(category, updateBody);
+  await category.save();
+  return category;
+};
+
 const getCategoryCount = () => Category.estimatedDocumentCount();
 
 module.exports = {
   getCategoryCount,
   queryCategories,
   createCategory,
+  getCategoryById,
+  updateCategoryById,
 };
