@@ -1,5 +1,8 @@
 const express = require('express')
 const authRoute = require('./auth.route');
+const userRoute = require('./user.route')
+const productRoute = require('./products.route')
+
 const auth = require('../../middlewares/auth');
 const catchAsync = require('../../utils/catchAsync')
 
@@ -26,6 +29,14 @@ const defaultRoutes = [
     {
         path: '/auth',
         route: authRoute
+    },
+    {
+        path: '/users',
+        route: userRoute
+    },
+    {
+        path: '/products',
+        route: productRoute
     }
 ]
 
