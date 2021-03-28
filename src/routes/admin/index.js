@@ -1,13 +1,26 @@
 const express = require('express')
 const authRoute = require('./auth.route');
 const auth = require('../../middlewares/auth');
+const catchAsync = require('../../utils/catchAsync')
+
+const userModel = require('../../models/user.model');
+const productModel = require('../../models/product.model')
+const categoryModel = require('../../models/category.model')
 
 const router = express.Router()
 
-router.get('/', auth(), (req, res) => {
-    console.log("im here ");
-    res.send("Dashboard");
-});
+router.get('/', catchAsync(async (req, res) => {
+    const userCount = await userModel.countDocuments({ role: "user" });
+    const productCount = await productModel.estimatedDocumentCount();
+    const categoryCount = await categoryModel.estimatedDocumentCount()
+    const data = {
+        userCount,
+        productCount,
+        categoryCount
+    }
+
+    res.render('dashboard/index', data);
+}));
 
 const defaultRoutes = [
     {

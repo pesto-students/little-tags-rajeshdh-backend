@@ -1,0 +1,30 @@
+<%- include('../partials/header.ejs') %>
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
+        </nav>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <a href="admin/users" class="card p-2 text-decoration-none text-dark">
+                    <h4>Users</h4>
+                    <h2><%= userCount %> </h2>
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card p-2">
+                    <h4>Products</h4>
+                    <h2><%= productCount %></h2>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card p-2">
+                    <h4>Category</h4>
+                    <h2><%= categoryCount %></h2>
+                </div>
+            </div>
+        </div>
+
+    </div>

@@ -29,6 +29,8 @@ connectDB();
 const whiteList = [
   'http://127.0.0.1:3000',
   'http://localhost:3000',
+  'http://127.0.0.1:3001',
+  'http://localhost:3001',
   'https://little-tags-pesto.netlify.app',
   'https://shopay-store.netlify.app',
 ];
@@ -72,7 +74,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', v0Router);
 app.use('/v1', v1Router);
