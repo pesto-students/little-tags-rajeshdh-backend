@@ -1,14 +1,15 @@
 const { Category } = require('../models');
 
-const getCategoryCount = () => Category.estimatedDocumentCount();
 /**
  * Create a category
  * @param {Object} categoryBody
- * @returns {Promise<Product>}
+ * @returns {Promise<category>}
  */
 const createCategory = async (categoryBody) => {
-  const category = await Category.create(categoryBody);
-  return category;
+  if (await Category.isCategoryTaken(categoryBody.name)) {
+    return false;
+  }
+  return Category.create(categoryBody);
 };
 
 /**
@@ -20,13 +21,56 @@ const createCategory = async (categoryBody) => {
  * @param {number} [options.page] - Current page (default = 1)
  * @returns {Promise<QueryResult>}
  */
-const queryCategories = async (filter, options) => {
-  const categories = await Category.paginate(filter, options);
-  return categories;
+const queryCategories = (filter, options) => {
+  return Category.paginate(filter, options);
 };
+
+/**
+ * Get category by id
+ * @param {ObjectId} id
+ * @returns {Promise<Category>}
+ */
+const getCategoryById = (id) => {
+  return Category.findById(id);
+};
+
+/**
+ * Update category by id
+ * @param {ObjectId} categoryId
+ * @param {Object} updateBody
+ * @returns {Promise<Category>}
+ */
+const updateCategoryById = async (categoryId, updateBody) => {
+  const category = await getCategoryById(categoryId);
+  if (!category) {
+    return false;
+  }
+  Object.assign(category, updateBody);
+  await category.save();
+  return category;
+};
+
+/**
+ * Delete product by id
+ * @param {ObjectId} categoryId
+ * @returns {Promise<Product>}
+ */
+const deleteCategoryById = async (categoryId) => {
+  const category = await getCategoryById(categoryId);
+  if (!category) {
+    return false;
+  }
+  await category.remove();
+  return category;
+};
+
+const getCategoryCount = () => Category.estimatedDocumentCount();
 
 module.exports = {
   getCategoryCount,
   queryCategories,
   createCategory,
+  getCategoryById,
+  updateCategoryById,
+  deleteCategoryById,
 };

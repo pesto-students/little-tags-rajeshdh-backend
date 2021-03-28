@@ -8,6 +8,7 @@ const CategorySchema = Schema(
     title: {
       type: String,
       required: true,
+      unique: true,
     },
     image: {
       type: String,
@@ -23,5 +24,10 @@ const CategorySchema = Schema(
 
 CategorySchema.plugin(toJSON);
 CategorySchema.plugin(paginate);
+
+CategorySchema.statics.isCategoryTaken = async function (name, excludeUserId) {
+  const category = await this.findOne({ name, _id: { $ne: excludeUserId } });
+  return !!category;
+};
 
 module.exports = mongoose.model('Category', CategorySchema);
