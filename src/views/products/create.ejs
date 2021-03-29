@@ -10,7 +10,7 @@
     </ol>
   </nav>
 
-  <form role="form" action="" method="POST">
+  <form role="form" name="productForm" id="productForm" action="" method="POST" >
     <div class="form-group">
       <label for="title" class="form-label">Title</label>
       <input class="form-control" name="title" placeholder="Title" type="text" required />
@@ -35,9 +35,9 @@
     </div>
 
     <div class="form-group" id="color-container">
-      <label for="color[0]" class="form-label mr-2">Color:</label>
-      <input class="form-control" name="color[0]" placeholder="Color" type="color" />
-      <input type="button" value="Add" onclick="addColorInput(0)" />
+      <label for="color" class="form-label mr-2">Color:</label>
+      <input class="form-control" name="colors" placeholder="Color" type="color" />
+      <input type="button" class="btn btn-primary" value="Add More Colors" onclick="addColorInput(0)" />
     </div>
 
     <div class="form-group">
@@ -56,7 +56,7 @@
     </div>
 
     <div class="text-center">
-      <button class="btn btn-primary mt-4">Create Product</button>
+      <button class="btn btn-primary mt-4" type="submit">Create Product</button>
     </div>
   </form>
   <script src="/js/products.js"></script>

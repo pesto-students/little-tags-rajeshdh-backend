@@ -5,13 +5,14 @@ const catchAsync = require('../../utils/catchAsync');
 const pick = require('../../utils/pick');
 
 const productDetails = (req) => {
-  const filter = pick(req.query, ['name', 'role']);
+  const filter = pick(req.query, ['title', 'brand']);
   const options = pick(req.query, ['sortBy', 'limit', 'page']);
   return productService.queryProducts(filter, options);
 };
 
 const getProducts = catchAsync(async (req, res) => {
   const result = await productDetails(req);
+
   const queries = { ...req.query };
   res.render('products/index', { ...result, ...queries });
 });

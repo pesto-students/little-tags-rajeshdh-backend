@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const getCategories = async () => {
   const url = '/v1/categories';
   const response = await fetch(url);
@@ -7,7 +9,7 @@ const getCategories = async () => {
 
 const createCategoryDropdown = async () => {
   const categories = await getCategories();
-  console.log(categories);
+
   const categorySelect = document.getElementById('category');
   categories.results.map((category) => categorySelect.options.add(new Option(category.title, category.id)));
 };
@@ -17,14 +19,18 @@ const addColorInput = (index) => {
   const formGroup = document.createElement('div');
   formGroup.classList.add('form-group');
 
-  const formField = `<div class="input-group input-group-alternative mb-3" >
-    <input class="form-control" name="color[${currentIndex}]" placeholder="Color" type="color" />
-    <input type="button" value="Add" onclick="addColorInput(${currentIndex})"/>
-  </div>`;
+  const formField = `<input class="form-control" name="colors" placeholder="Color" type="color" />`;
   formGroup.innerHTML = formField;
   const colorContainer = document.getElementById('color-container');
 
   colorContainer.parentNode.insertBefore(formGroup, colorContainer.nextSibling);
+};
+
+const submitForm = () => {
+  const form = document.querySelector('form');
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  return false;
 };
 
 const init = () => {

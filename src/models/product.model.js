@@ -33,6 +33,7 @@ const ProductSchema = new Schema({
       value: [String],
     },
   ],
+  colors: [String],
   gallery: [
     {
       title: {
@@ -54,13 +55,8 @@ const ProductSchema = new Schema({
     default: 'INR',
   },
   category: {
-    name: {
-      type: String,
-    },
-    categoryId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Category',
-    },
+    type: mongoose.SchemaTypes.ObjectId,
+    ref: 'Category',
   },
 });
 ProductSchema.plugin(toJSON);
