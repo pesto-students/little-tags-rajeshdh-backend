@@ -56,7 +56,6 @@ const ProductSchema = new Schema({
   category: {
     name: {
       type: String,
-      required: true,
     },
     categoryId: {
       type: mongoose.Schema.Types.ObjectId,

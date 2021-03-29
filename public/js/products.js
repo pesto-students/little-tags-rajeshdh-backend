@@ -7,7 +7,7 @@ const getCategories = async () => {
 
 const createCategoryDropdown = async () => {
   const categories = await getCategories();
-
+  console.log(categories);
   const categorySelect = document.getElementById('category');
   categories.results.map((category) => categorySelect.options.add(new Option(category.title, category.id)));
 };
