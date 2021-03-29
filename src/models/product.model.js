@@ -47,8 +47,9 @@ const ProductSchema = new Schema({
     },
   ],
   originalPrice: Number,
-  currentPrice: Number,
+  currentPrice: Number, // it should be calculated based on discount and original price
   offer: Number,
+  discount: Number,
   currency: {
     type: String,
     enum: ['INR', 'USD'],

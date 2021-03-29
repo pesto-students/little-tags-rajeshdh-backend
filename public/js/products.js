@@ -13,9 +13,9 @@ const createCategoryDropdown = async () => {
   const categorySelect = document.getElementById('category');
   categories.results.map((category) => categorySelect.options.add(new Option(category.title, category.id)));
 };
+  
 
-const addColorInput = (index) => {
-  const currentIndex = index + 1;
+const addColorInput = () => {
   const formGroup = document.createElement('div');
   formGroup.classList.add('form-group');
 

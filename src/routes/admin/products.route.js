@@ -15,7 +15,7 @@ router.post('/create', createProduct);
 
 router.get('/update/:id', async (req, res) => {
   const product = await getProductById(req.params.id);
-  res.render('products/create', product);
+  res.render('products/update', product);
 });
 
 router.post('/update/:id', updateProduct);
