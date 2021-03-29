@@ -37,10 +37,9 @@ const updateProduct = {
       brand: Joi.string().required(),
       description: Joi.string().required(),
       category: Joi.object({
-        name: Joi.string(),
         categoryId: Joi.custom(objectId),
       }),
-      features: Joi.array().min(1),
+      features: Joi.array(),
     })
     .min(1),
 };

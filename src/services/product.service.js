@@ -8,7 +8,9 @@ const ApiError = require('../utils/ApiError');
  * @returns {Promise<Product>}
  */
 const createProduct = async (productBody) => {
-  const product = await Product.create(productBody);
+  const productInfo = { ...productBody, category: { _id: productBody.category } };
+
+  const product = await Product.create(productInfo);
   return product;
 };
 
@@ -22,7 +24,8 @@ const createProduct = async (productBody) => {
  * @returns {Promise<QueryResult>}
  */
 const queryProducts = async (filter, options) => {
-  const products = await Product.paginate(filter, options);
+  const populateOption = { ...options, populate: 'category' };
+  const products = await Product.paginate(filter, populateOption);
   return products;
 };
 

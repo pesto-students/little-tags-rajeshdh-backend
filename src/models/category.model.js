@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 
 const CategorySchema = Schema(
   {
-    name: {
+    title: {
       type: String,
       required: true,
       unique: true,

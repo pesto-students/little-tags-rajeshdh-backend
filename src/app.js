@@ -49,6 +49,8 @@ app.use(
   })
 );
 
+// app.use(cors());
+
 if (config.env !== 'test') {
   app.use(morgan.successHandler);
   app.use(morgan.errorHandler);

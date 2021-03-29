@@ -33,6 +33,7 @@ const ProductSchema = new Schema({
       value: [String],
     },
   ],
+  colors: [String],
   gallery: [
     {
       title: {
@@ -46,22 +47,17 @@ const ProductSchema = new Schema({
     },
   ],
   originalPrice: Number,
-  currentPrice: Number,
+  currentPrice: Number, // it should be calculated based on discount and original price
   offer: Number,
+  discount: Number,
   currency: {
     type: String,
     enum: ['INR', 'USD'],
     default: 'INR',
   },
   category: {
-    name: {
-      type: String,
-      required: true,
-    },
-    categoryId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Category',
-    },
+    type: mongoose.SchemaTypes.ObjectId,
+    ref: 'Category',
   },
 });
 ProductSchema.plugin(toJSON);
