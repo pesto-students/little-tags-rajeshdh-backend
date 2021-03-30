@@ -11,25 +11,25 @@
   </nav>
   <div id="direct_upload">
     <form action="" enctype="multipart/form-data" method="post">
-      <div class="form_line">
-        <label for="title">Title:</label>
-        <div class="form_controls">
-          <input id="title" name="title" size="30" type="text"  />
-        </div>
+       <div class="form-group">
+        <label for="title" class="form-label">Title:</label>
+     
+          <input id="title" class="form-control" name="title" size="30" type="text"  />
+      
       </div>
-      <div class="form_line">
-        <label for="image">Image:</label>
-        <div class="form_controls">
-          <input id="image" name="image" type="file" />
-          <input id="image_cache" name="image_cache" type="hidden" />
-        </div>
+       <div class="form-group">
+        <label for="image" class="form-label">Image:</label>
+
+          <input id="image" class="form-control" name="image" type="file" />
+          <input id="imageCache" name="imageCache" type="hidden" />
+ 
       </div>
-      <div class="form_line">
-        <div class="form_controls">
-          <input name="commit" type="submit" value="Submit Photo" />
+       <div class="form-group">
+
+          <input name="commit" class="btn btn-primary mt-4" type="submit" value="Submit" />
   
         </div>
       </div>
-      <input id="direct" name="direct" type="hidden" />
+
   </form>
 </div>
