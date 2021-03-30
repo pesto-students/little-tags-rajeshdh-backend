@@ -1,0 +1,12 @@
+<%- include('../partials/header.ejs') %>
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+      <li class="breadcrumb-item"><a href="/admin/images">Images</a></li>
+      <li class="breadcrumb-item active" aria-current="page">
+        <% if(typeof name != 'undefined') { %> Update: <%= name %> <% }else{ %> Create <% } %>
+      </li>
+    </ol>
+  </nav>
+</div>

@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs') %>
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Images</li>
+    </ol>
+  </nav>
+
+  <div class="pb-5">
+    <a href="/admin/images/create" class="btn btn-primary float-right">Create</a>
+  </div>
+
+  <% if(typeof(message) !== "undefined") { %>
+  <div class="alert p-3 <% if(error == 'true') { %> alert-danger<% } else { %> alert-success <% }%>"><%= message %></div>
+  <% } %>
