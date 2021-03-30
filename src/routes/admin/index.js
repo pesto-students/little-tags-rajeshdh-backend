@@ -3,6 +3,7 @@ const authRoute = require('./auth.route');
 const userRoute = require('./user.route');
 const productRoute = require('./products.route');
 const categoryRoute = require('./category.route');
+const imageRoute = require('./image.route');
 
 const catchAsync = require('../../utils/catchAsync');
 
@@ -44,6 +45,10 @@ const defaultRoutes = [
   {
     path: '/category',
     route: categoryRoute,
+  },
+  {
+    path: '/images',
+    route: imageRoute,
   },
 ];
 
