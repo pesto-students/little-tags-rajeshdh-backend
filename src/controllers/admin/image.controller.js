@@ -18,13 +18,21 @@ const getImages = catchAsync(async (req, res) => {
 });
 
 const createImage = catchAsync(async (req, res) => {
-  const image = await imageService.createImage(req.body);
   let query = '';
-  if (image) {
-    query = queryString.stringify({
-      error: false,
-      message: 'Image Created',
-    });
+  if (req.file) {
+    const imageObj = {
+      title: req.body.title,
+      url: req.file.path,
+      publicId: req.file.filename,
+    };
+    const image = await imageService.createImage(imageObj);
+
+    if (image) {
+      query = queryString.stringify({
+        error: false,
+        message: 'Image Created',
+      });
+    }
   } else {
     query = queryString.stringify({
       error: true,

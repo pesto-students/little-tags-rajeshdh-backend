@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const validator = require('validator');
 const { toJSON, paginate } = require('./plugins');
 
 const imageSchema = mongoose.Schema(
@@ -7,9 +8,17 @@ const imageSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    cloudinaryId: {
+    publicId: {
       type: String,
       required: true,
+    },
+    url: {
+      type: String,
+      maxlength: [200, 'Max length allowed for an image URL is 200 characters.'],
+      validate: {
+        validator: validator.isURL,
+        message: 'Please provide a valid image URL.',
+      },
     },
   },
   {
