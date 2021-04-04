@@ -31,7 +31,6 @@ const OrderSchema = Schema(
       ref: 'User',
     },
     shippingAddress: {
-      id: 1,
       fullName: { type: String, required: true },
       mobileNumber: { type: String, required: true },
       address: { type: String, required: true },

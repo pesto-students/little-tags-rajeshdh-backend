@@ -25,31 +25,31 @@ const app = express();
 // connect database
 connectDB();
 
-const whiteList = [
-  'http://127.0.0.1:3000',
-  'http://localhost:3000',
-  'http://127.0.0.1:3001',
-  'http://localhost:3001',
-  'https://little-tags-pesto.netlify.app',
-  'https://shopay-store.netlify.app',
-];
-app.use(
-  cors({
-    origin(origin, callback) {
-      if (!origin) {
-        return callback(null, true);
-      }
-      const message = `The CORS policy for this origin doesn't
-    allow access from the particular origin.`;
-      if (!whiteList.includes(origin)) {
-        return callback(new TypeError(message), false);
-      }
-      return callback(null, true);
-    },
-  })
-);
+// const whiteList = [
+//   'http://127.0.0.1:3000',
+//   'http://localhost:3000',
+//   'http://127.0.0.1:3001',
+//   'http://localhost:3001',
+//   'https://little-tags-pesto.netlify.app',
+//   'https://shopay-store.netlify.app',
+// ];
+// app.use(
+//   cors({
+//     origin(origin, callback) {
+//       if (!origin) {
+//         return callback(null, true);
+//       }
+//       const message = `The CORS policy for this origin doesn't
+//     allow access from the particular origin.`;
+//       if (!whiteList.includes(origin)) {
+//         return callback(new TypeError(message), false);
+//       }
+//       return callback(null, true);
+//     },
+//   })
+// );
 
-// app.use(cors());
+app.use(cors());
 
 if (config.env !== 'test') {
   app.use(morgan.successHandler);
