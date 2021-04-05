@@ -3,24 +3,25 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Categories</li>
+      <li class="breadcrumb-item active" aria-current="page">Orders</li>
     </ol>
   </nav>
 
   <div class="pb-5">
-    <a href="/admin/category/create" class="btn btn-primary float-right">Create</a>
+    <a href="/admin/order/create" class="btn btn-primary float-right">Create</a>
   </div>
 
   <% if(typeof(message) !== "undefined") { %>
   <div class="alert p-3 <% if(error == 'true') { %> alert-danger<% } else { %> alert-success <% }%>"><%= message %></div>
   <% } %>
-
   <table class="table align-middle table-hover">
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col"><Title></Title></th>
-        <th scope="col">Image</th>
+        <th scope="col">Products</th>
+        <th scope="col">Status</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Customer</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -28,12 +29,18 @@
       <% results.forEach(function(result,index) { %>
       <tr>
         <th class="align-middle" scope="row"><%= ((page-1)*10)+(index+1) %></th>
-        <td class="align-middle"><%= result.title %></td>
+        <td class="align-middle"><%= result.products.map((item) => item.name) %></td>
         <td>
-          <img src="<%= result.image %>" height="70" />
+          <%= result.status %>
+        </td>
+        <td>
+          <%= result.totalPrice %>
+        </td>
+        <td>
+          <%= result.user.name %>
         </td>
         <td class="align-middle">
-          <a class="text-decoration-none" href="/admin/category/update/<%= result.id %>">
+          <a class="text-decoration-none" href="/admin/order/update/<%= result.id %>">
             <i class="fa fa-edit"></i>
           </a>
           <a class="text-decoration-none ml-2" data-toggle="modal" data-target="#<%= result.id %>">
@@ -52,7 +59,7 @@
         <span class="page-link"><%= paginate %> </span>
       </li>
       <% }else{ %>
-      <li class="page-item"><a class="page-link" href="/admin/category?page=<%= paginate %>"><%= paginate %></a></li>
+      <li class="page-item"><a class="page-link" href="/admin/orders?page=<%= paginate %>"><%= paginate %></a></li>
       <% } %> <% } %>
     </ul>
   </nav>
@@ -67,16 +74,15 @@
           <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
           <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">&times;</button>
         </div>
-        <div class="modal-body">Are you sure you want to delete <%= result.title %>?</div>
+        <div class="modal-body">Are you sure you want to delete <%= result.name %>?</div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <form action="/admin/category/delete/<%= result.id %>" method="POST">
+          <form action="/admin/order/delete/<%= result.id %>" method="POST">
             <button type="submit" class="btn btn-danger">Delete</button>
           </form>
         </div>
       </div>
     </div>
   </div>
-
   
   <% }) %>

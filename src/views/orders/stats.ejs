@@ -1,0 +1,42 @@
+<%- include('../partials/header.ejs') %>
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Order Stats</li>
+    </ol>
+  </nav>
+
+  <div class="row">
+    <div class="col mb-3">
+      <label for="duration-select" class="form-label">Select Duration</label>
+      <select class="form-select form-control" onchange="getStats(this);" name="duration-select" aria-label="Select Duration">
+        <option selected value="month">Current Month</option>
+        <option value="day">Today</option>
+        <option value="year">Current year</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card p-2 text-decoration-none text-dark">
+        <h4>Products Ordered</h4>
+        <table id="productStat"></table>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card p-2 text-decoration-none text-dark">
+        <h4>Orders</h4>
+        <table id="orderStat"></table>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card p-2 text-decoration-none text-dark">
+        <h4>Customers</h4>
+        <table id="customerStat"></table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/orders.js"></script>

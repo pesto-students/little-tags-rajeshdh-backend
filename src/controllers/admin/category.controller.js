@@ -5,7 +5,7 @@ const catchAsync = require('../../utils/catchAsync');
 const pick = require('../../utils/pick');
 
 const categoryDetails = (req) => {
-  const filter = pick(req.query, ['name', 'role']);
+  const filter = pick(req.query, ['title']);
   const options = pick(req.query, ['sortBy', 'limit', 'page']);
   return categoryService.queryCategories(filter, options);
 };
@@ -19,6 +19,7 @@ const getCategories = catchAsync(async (req, res) => {
 const createCategory = catchAsync(async (req, res) => {
   const category = await categoryService.createCategory(req.body);
   let query = '';
+  console.log(category);
   if (category) {
     query = queryString.stringify({
       error: false,
