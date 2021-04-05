@@ -9,6 +9,11 @@ mongoose.connect(process.env.MONGODB_URL, {
   useUnifiedTopology: true,
 });
 
+const randomInteger = (min, max) => {
+  const r = Math.random() * (max - min) + min;
+  return Math.floor(r);
+};
+
 const getCategories = async () => {
   const categories = await Category.find().sort({ createdAt: -1 }).exec();
 
@@ -21,7 +26,7 @@ const getCategories = async () => {
 
 getCategories().then((categories) => {
   categories.forEach((category) => {
-    const Products = Array(10)
+    const products = Array(randomInteger(1, 10))
       .fill()
       .map((i) => {
         const product = new Product({
@@ -46,20 +51,20 @@ getCategories().then((categories) => {
 
     const statusArr = ['active', 'processing', 'complete'];
     const users = ['60584586fbf7a40790e61a30', '605845028d8d5006df45b153', '605861dc1c88bd1d277bf555'];
-    const orders = Array(10)
+    const orders = Array(randomInteger(4, 10))
       .fill()
       .map(() => {
         const order = new Order({
           status: statusArr[faker.datatype.number(2)],
-          modifiedOn: faker.date.recent(),
-          products: Array(5)
+          modifiedOn: faker.date.past(),
+          products: Array(randomInteger(1, products.length))
             .fill()
             .map((s, i) => {
               return {
-                productId: Products[i]._id,
+                productId: products[i]._id,
                 quantity: faker.datatype.number(5),
-                name: Products[i].title,
-                price: Products[i].currentPrice,
+                name: products[i].title,
+                price: products[i].currentPrice,
               };
             }),
           user: { _id: users[faker.datatype.number(2)] },

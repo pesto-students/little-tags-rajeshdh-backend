@@ -1,25 +1,32 @@
 const express = require('express');
 
-const { getOrders, createOrder, updateOrder, deleteOrder } = require('../../controllers/admin/order.controller');
-const { getOrderById } = require('../../services/order.service');
+const { orderController } = require('../../controllers/admin');
 
 const router = express.Router();
 
-router.get('/', getOrders);
+router.get('/', orderController.getOrders);
 
 router.get('/create', (req, res) => {
   res.render('orders/create');
 });
 
-router.post('/create', createOrder);
+router.post('/create', orderController.createOrder);
 
-router.get('/update/:id', async (req, res) => {
-  const order = await getOrderById(req.params.id);
+router.get('/update/:orderId', async (req, res) => {
+  const order = orderController.getOrder(req);
   res.render('orders/update', order);
 });
 
-router.post('/update/:id', updateOrder);
+router.post('/update/:id', orderController.updateOrder);
 
-router.post('/delete/:id', deleteOrder);
+router.post('/delete/:id', orderController.deleteOrder);
+
+router.get('/stats', async (req, res) => {
+  res.render('orders/stats');
+});
+
+router.get('/productstats', orderController.getOrderProductStats);
+router.get('/customerstats', orderController.getOrderCustomers);
+router.get('/orderstats', orderController.getTotalOrderPrice);
 
 module.exports = router;

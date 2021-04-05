@@ -3,7 +3,7 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Categories</li>
+      <li class="breadcrumb-item active" aria-current="page">Orders</li>
     </ol>
   </nav>
 
@@ -14,7 +14,6 @@
   <% if(typeof(message) !== "undefined") { %>
   <div class="alert p-3 <% if(error == 'true') { %> alert-danger<% } else { %> alert-success <% }%>"><%= message %></div>
   <% } %>
-
   <table class="table align-middle table-hover">
     <thead>
       <tr>
@@ -85,6 +84,5 @@
       </div>
     </div>
   </div>
-
   
   <% }) %>

@@ -1,6 +1,7 @@
 const queryString = require('querystring');
-
+const httpStatus = require('http-status');
 const { orderService } = require('../../services');
+const ApiError = require('../../utils/ApiError');
 const catchAsync = require('../../utils/catchAsync');
 const pick = require('../../utils/pick');
 
@@ -15,6 +16,44 @@ const getOrders = catchAsync(async (req, res) => {
 
   const queries = { ...req.query };
   res.render('orders/index', { ...result, ...queries });
+});
+
+const getOrder = catchAsync(async (req, res) => {
+  const order = await orderService.getOrderById(req.params.orderId);
+  if (!order) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Order not found');
+  }
+  res.send(order);
+});
+
+const getOrderProductStats = catchAsync(async (req, res) => {
+  const filter = pick(req.query, ['start', 'end']);
+  filter.start = filter.start ? new Date(filter.start) : new Date(new Date().setUTCHours(0, 0, 0, 0)).toISOString();
+  filter.end = filter.end ? new Date(filter.end) : new Date(new Date().setUTCHours(23, 59, 59, 999)).toISOString();
+
+  const result = await orderService.getOrderProductStats(filter);
+
+  res.send(result);
+});
+
+const getTotalOrderPrice = catchAsync(async (req, res) => {
+  const filter = pick(req.query, ['start', 'end']);
+  filter.start = filter.start ? new Date(filter.start) : new Date(new Date().setUTCHours(0, 0, 0, 0)).toISOString();
+  filter.end = filter.end ? new Date(filter.end) : new Date(new Date().setUTCHours(23, 59, 59, 999)).toISOString();
+
+  const result = await orderService.getTotalOrderPrice(filter);
+
+  res.send(result);
+});
+
+const getOrderCustomers = catchAsync(async (req, res) => {
+  const filter = pick(req.query, ['start', 'end']);
+  filter.start = filter.start ? new Date(filter.start) : new Date(new Date().setUTCHours(0, 0, 0, 0)).toISOString();
+  filter.end = filter.end ? new Date(filter.end) : new Date(new Date().setUTCHours(23, 59, 59, 999)).toISOString();
+
+  const result = await orderService.getOrderCustomers(filter);
+
+  res.send(result);
 });
 
 const createOrder = catchAsync(async (req, res) => {
@@ -76,4 +115,8 @@ module.exports = {
   createOrder,
   updateOrder,
   deleteOrder,
+  getOrderProductStats,
+  getOrder,
+  getTotalOrderPrice,
+  getOrderCustomers,
 };

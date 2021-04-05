@@ -68,6 +68,48 @@ const deleteOrderById = async (orderId) => {
 
 const getOrderCount = () => Order.estimatedDocumentCount();
 
+const getOrderProductStats = async (filter) => {
+  const stats = await Order.aggregate()
+    .match({ modifiedOn: { $gte: filter.start, $lt: filter.end } })
+    .unwind('products')
+    .group({
+      _id: '$products.name',
+      count: {
+        $sum: 1,
+      },
+    })
+    .sort('-count');
+  return stats;
+};
+const getTotalOrderPrice = async (filter) => {
+  const stats = await Order.aggregate()
+    .match({ modifiedOn: { $gte: filter.start, $lt: filter.end } })
+    .group({
+      _id: null,
+      order_totalPrice: { $sum: '$totalPrice' },
+      count: { $sum: 1 },
+    })
+    .sort('-count');
+  return stats;
+};
+
+const getOrderCustomers = async (filter) => {
+  const stats = await Order.aggregate()
+    .match({ modifiedOn: { $gte: filter.start, $lt: filter.end } })
+    .lookup({ from: 'users', localField: 'user', foreignField: '_id', as: 'users' })
+    .group({
+      _id: {
+        user: '$user',
+        name: '$users.name',
+      },
+      count: {
+        $sum: 1,
+      },
+    })
+    .sort('-count');
+  return stats;
+};
+
 module.exports = {
   createOrder,
   queryOrders,
@@ -75,4 +117,7 @@ module.exports = {
   updateOrderById,
   deleteOrderById,
   getOrderCount,
+  getOrderProductStats,
+  getOrderCustomers,
+  getTotalOrderPrice,
 };
