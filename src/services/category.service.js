@@ -6,7 +6,7 @@ const { Category } = require('../models');
  * @returns {Promise<category>}
  */
 const createCategory = async (categoryBody) => {
-  if (await Category.isCategoryTaken(categoryBody.name)) {
+  if (await Category.isCategoryTaken(categoryBody.title)) {
     return false;
   }
   return Category.create(categoryBody);

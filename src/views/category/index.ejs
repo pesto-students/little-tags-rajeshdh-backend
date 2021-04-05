@@ -19,7 +19,7 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Name</th>
+        <th scope="col"><Title></Title></th>
         <th scope="col">Image</th>
         <th scope="col">Action</th>
       </tr>
@@ -28,7 +28,7 @@
       <% results.forEach(function(result,index) { %>
       <tr>
         <th class="align-middle" scope="row"><%= ((page-1)*10)+(index+1) %></th>
-        <td class="align-middle"><%= result.name %></td>
+        <td class="align-middle"><%= result.title %></td>
         <td>
           <img src="<%= result.image %>" height="70" />
         </td>
@@ -67,7 +67,7 @@
           <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
           <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">&times;</button>
         </div>
-        <div class="modal-body">Are you sure you want to delete <%= result.name %>?</div>
+        <div class="modal-body">Are you sure you want to delete <%= result.title %>?</div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <form action="/admin/category/delete/<%= result.id %>" method="POST">

@@ -25,8 +25,8 @@ const CategorySchema = Schema(
 CategorySchema.plugin(toJSON);
 CategorySchema.plugin(paginate);
 
-CategorySchema.statics.isCategoryTaken = async function (name, excludeUserId) {
-  const category = await this.findOne({ name, _id: { $ne: excludeUserId } });
+CategorySchema.statics.isCategoryTaken = async function (title, excludeUserId) {
+  const category = await this.findOne({ title, _id: { $ne: excludeUserId } });
   return !!category;
 };
 

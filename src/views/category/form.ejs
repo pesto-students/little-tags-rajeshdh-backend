@@ -5,14 +5,14 @@
       <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
       <li class="breadcrumb-item"><a href="/admin/category">Categories</a></li>
       <li class="breadcrumb-item active" aria-current="page">
-        <% if(typeof name != 'undefined') { %> Update: <%= name %> <% }else{ %> Create <% } %> 
+        <% if(typeof title != 'undefined') { %> Update: <%= title %> <% }else{ %> Create <% } %> 
       </li>
     </ol>
   </nav>
   <form action="" method="POST">
     <div class="form-group">
-      <label for="" class="form-label">Name</label>
-      <input class="form-control" type="text" name="name" placeholder="Enter category Name" value="<%if(typeof name != 'undefined'){%><%=name%><%}%>" required />
+      <label for="" class="form-label">Title</label>
+      <input class="form-control" type="text" name="title" placeholder="Enter category Title" value="<%if(typeof title != 'undefined'){%><%=title%><%}%>" required />
     </div>
     <div class="form-group">
       <label for="" class="form-label">Image URL</label>

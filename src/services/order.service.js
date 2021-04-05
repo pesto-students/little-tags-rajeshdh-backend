@@ -8,7 +8,6 @@ const ApiError = require('../utils/ApiError');
  * @returns {Promise<Order>}
  */
 const createOrder = async (orderBody) => {
-  console.log(orderBody);
   const order = await Order.create(orderBody);
   return order;
 };
@@ -23,7 +22,7 @@ const createOrder = async (orderBody) => {
  * @returns {Promise<QueryResult>}
  */
 const queryOrders = async (filter, options) => {
-  const populateOption = { ...options, populate: 'product' };
+  const populateOption = { ...options, populate: 'product,user' };
   const orders = await Order.paginate(filter, populateOption);
   return orders;
 };

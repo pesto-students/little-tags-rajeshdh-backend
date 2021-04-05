@@ -83,4 +83,4 @@ const OrderSchema = Schema(
 OrderSchema.plugin(toJSON);
 OrderSchema.plugin(paginate);
 
-module.exports = mongoose.model(' Order', OrderSchema);
+module.exports = mongoose.model('Order', OrderSchema);
