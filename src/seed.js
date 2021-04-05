@@ -19,10 +19,6 @@ const getCategories = async () => {
 
   return categories;
 };
-// getCategories().then((category) => {
-//   console.log(category);
-// });
-// const categories = ['6060511f29eab02bc7c122d9', '6060512729eab02bc7c122da', '6060512d29eab02bc7c122db'];
 
 getCategories().then((categories) => {
   categories.forEach((category) => {
@@ -94,6 +90,6 @@ getCategories().then((categories) => {
         return order;
       });
 
-    console.log(orders);
+    console.log('Process completed');
   });
 });

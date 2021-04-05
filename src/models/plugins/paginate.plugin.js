@@ -42,12 +42,6 @@ const paginate = (schema) => {
 
     if (options.populate) {
       options.populate.split(',').forEach((populateOption) => {
-        console.log(
-          populateOption
-            .split('.')
-            .reverse()
-            .reduce((a, b) => ({ path: b, populate: a }))
-        );
         docsPromise = docsPromise.populate(
           populateOption
             .split('.')
@@ -56,7 +50,6 @@ const paginate = (schema) => {
         );
       });
     }
-    // console.log(docsPromise);
 
     docsPromise = docsPromise.exec();
 
